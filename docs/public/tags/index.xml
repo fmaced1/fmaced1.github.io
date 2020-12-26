@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on fmaced1</title>
+    <link>https://fmaced1.github.io/tags/</link>
+    <description>Recent content in Tags on fmaced1</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>chatbot</title>
+      <link>https://fmaced1.github.io/tags/chatbot/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/chatbot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cka</title>
+      <link>https://fmaced1.github.io/tags/cka/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/cka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>helm</title>
+      <link>https://fmaced1.github.io/tags/helm/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://fmaced1.github.io/tags/kubernetes/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://fmaced1.github.io/tags/python/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
