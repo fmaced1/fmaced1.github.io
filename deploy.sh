@@ -13,7 +13,7 @@ printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 # Build the project.
 hugo -t hugo-PaperMod # if using a theme, replace with `hugo -t <YOURTHEME>`
 
-mv ./public/ ./docs/
+mv public docs
 
 # Add changes to git.
 git add *
