@@ -62,8 +62,8 @@ params:
     homeInfoParams:
         Title: "Bem vindo! \U0001F44B"
         Content: >
-            - Bloco de notas mantido por Fabricio Macedo **@fmaced1**, com a finalidade 
-            de compartilhar conteúdos sobre ferramentas e temas relacionados à cultura DevOps.
+            - Blog mantido por Fabricio Macedo **@fmaced1**, com a finalidade de compartilhar
+            dicas, anotações e ferramentas relacionadas a cultura DevOps e desenvolvimento de software.
 
     socialIcons:
         - name: github

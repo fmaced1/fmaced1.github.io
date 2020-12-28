@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>helm on fmaced1</title>
-    <link>https://fmaced1.github.io/tags/helm/</link>
-    <description>Recent content in helm on fmaced1</description>
+    <title>telegram on fmaced1</title>
+    <link>https://fmaced1.github.io/categories/telegram/</link>
+    <description>Recent content in telegram on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/telegram/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Como fazer deploy da sua aplicação com o Helm</title>
-      <link>https://fmaced1.github.io/post/deploy-com-o-helm-copy/</link>
+      <title>Como enviar mensagens via telegram com python</title>
+      <link>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fmaced1.github.io/post/deploy-com-o-helm-copy/</guid>
+      <guid>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</guid>
       <description>Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file content/post/hello-hugo.md has been converted into a complete HTML document by Hugo. Isn&amp;rsquo;t that pretty nifty?
 A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
 You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
