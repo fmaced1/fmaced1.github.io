@@ -12,7 +12,6 @@ cover:
     caption: "Yahoo! Finance market data downloader"
 ShowToc: true
 TocOpen: false
-author: "fmaced1"
 draft: true
 ---
 
