@@ -1,7 +1,7 @@
 ---
 title: "Fazendo o download dos dados históricos de ações usando o yfinance"
 description: "Fazendo o download dos dados históricos de ações usando o yfinance"
-date: "2020-12-26"
+date: "2021-01-03"
 categories:
   - "python"
 tags:
@@ -13,6 +13,7 @@ cover:
     caption: "Yahoo! Finance market data downloader"
 ShowToc: true
 TocOpen: false
+author: fmaced1
 ---
 
 Intro

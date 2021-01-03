@@ -5,7 +5,25 @@
     <link>https://fmaced1.github.io/tags/</link>
     <description>Recent content in Tags on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>financial analisys</title>
+      <link>https://fmaced1.github.io/tags/financial-analisys/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/financial-analisys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://fmaced1.github.io/tags/python/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>chatbot</title>
       <link>https://fmaced1.github.io/tags/chatbot/</link>
@@ -25,15 +43,6 @@
     </item>
     
     <item>
-      <title>financial analisys</title>
-      <link>https://fmaced1.github.io/tags/financial-analisys/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/tags/financial-analisys/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>helm</title>
       <link>https://fmaced1.github.io/tags/helm/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
@@ -48,15 +57,6 @@
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fmaced1.github.io/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://fmaced1.github.io/tags/python/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/tags/python/</guid>
       <description></description>
     </item>
     

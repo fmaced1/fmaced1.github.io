@@ -5,7 +5,17 @@
     <link>https://fmaced1.github.io/categories/python/</link>
     <description>Recent content in python on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
+      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
+      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
+Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
+    </item>
+    
     <item>
       <title>Como enviar mensagens via telegram com python</title>
       <link>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</link>
@@ -28,16 +38,6 @@ Showing off with Markdown A full cheat sheet can be found here or through Google
 A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
 You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
 Showing off with Markdown A full cheat sheet can be found here or through Google.</description>
-    </item>
-    
-    <item>
-      <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
-      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
-      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
-Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
     </item>
     
   </channel>
