@@ -6,6 +6,7 @@ categories:
   - "python"
 tags:
   - "python"
+  - "financial analisys"
 cover:
     image: "https://repository-images.githubusercontent.com/91948540/e2b14a80-7fc7-11e9-8b9b-5e1f56b0052a"
     alt: "Yahoo! Finance market data downloader"
@@ -23,12 +24,12 @@ Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologi
 
 > Bom, mas como e onde conseguir os dados para fazer essas análises?
 
-Navegando bastante entre um post e outro encontrei o post do [Ran Aroussi](https://aroussi.com/post/python-yahoo-finance) criador dessa lib fantástica escrita em python, era exatamente o que eu precisava para comecar o meu projeto de bot que iria fazer todo o trabalho chato no meu lugar
+Navegando bastante entre um post e outro encontrei o [post](https://aroussi.com/post/python-yahoo-finance) do Ran Aroussi criador dessa lib fantástica escrita em python, era exatamente o que eu precisava para começar o meu projeto de bot que iria fazer todo o trabalho chato no meu lugar.
 
 Como instalar e usar a lib yfinance
 -------------------------
 
-Para usar a lib yfinance voce vai precisar ter o **python >=3.4** e o **pip** instalado, [vejá aqui como instalar]()
+Para usar a lib yfinance voce vai precisar ter o **python >=3.4** e o **pip** instalado, veja aqui como instalar no [Windows](https://python.org.br/instalacao-windows/), [Linux](https://python.org.br/instalacao-linux/) e [MacBook](https://python.org.br/instalacao-mac/)
 
 Com o python e pip instalados, execute o comando à seguir no terminal:
 
@@ -41,6 +42,8 @@ Pronto, agora voce já consegue comecar a usar.
 Fazendo o download de dados históricos uma ação por vez
 --------------------
 
+Primeiro crie um arquivo com a extensão `*.py` e adicione as seguintes linhas:
+
 ```python
 import yfinance as yf
 
@@ -52,12 +55,13 @@ historical_data = yf.Ticker(ticker).history(period, interval, actions=False).dro
 
 print(historical_data)
 
-"""              Open    High    Low    Close      Volume  Dividends  Splits
-Date
-1986-03-13    0.06    0.07    0.06    0.07  1031788800        0.0     0.0
-1986-03-14    0.07    0.07    0.07    0.07   308160000        0.0     0.0
-...
-2019-04-15  120.94  121.58  120.57  121.05    15792600        0.0     0.0
-2019-04-16  121.64  121.65  120.10  120.77    14059700        0.0     0.0
+"""
+                 Open       High        Low      Close       Volume
+Date                                                               
+2019-12-29  51.497285  52.313177  51.065340  51.766048   46722600.0
+2020-01-05  51.641265  52.188394  50.921359  51.218922   88179900.0
+2020-01-12  51.487684  54.799253  51.362899  54.712864  126412900.0
+2020-01-19  54.712866  55.058422  51.535679  51.641266  102226200.0
+2020-01-26  49.587132  49.999879  47.801764  48.252907  138220500.0
 """
 ```
