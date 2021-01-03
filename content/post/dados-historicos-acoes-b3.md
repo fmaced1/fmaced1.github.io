@@ -4,7 +4,6 @@ description: "Fazendo o download dos dados históricos de ações usando o yfina
 date: "2020-12-26"
 categories:
   - "python"
-  - "tutorial"
 tags:
   - "python"
 cover:
@@ -24,9 +23,9 @@ Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse me
 
 Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal "interessante" com base em alguns parametros.
 
-> Bom, mas como e onde conseguir os dados para fazer essas análises? 🤔
+> Bom, mas como e onde conseguir os dados para fazer essas análises?
 
-Navegando bastante entre um post e outro encontrei o post do [Ran Aroussi](https://aroussi.com/post/python-yahoo-finance) criador dessa lib fantástica escrita em python, era exatamente o que eu precisava para começar o meu projeto de bot que iria fazer todo o trabalho chato no meu lugar 😁
+Navegando bastante entre um post e outro encontrei o post do [Ran Aroussi](https://aroussi.com/post/python-yahoo-finance) criador dessa lib fantástica escrita em python, era exatamente o que eu precisava para começar o meu projeto de bot que iria fazer todo o trabalho chato no meu lugar
 
 Como instalar e usar a lib yfinance
 -------------------------
