@@ -4,7 +4,66 @@
     <title>fmaced1</title>
     <link>https://fmaced1.github.io/</link>
     <description>Recent content on fmaced1</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://fmaced1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como enviar mensagens via telegram com python</title>
+      <link>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</guid>
+      <description>Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file content/post/hello-hugo.md has been converted into a complete HTML document by Hugo. Isn&amp;rsquo;t that pretty nifty?
+A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
+You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
+Showing off with Markdown A full cheat sheet can be found here or through Google.</description>
+    </item>
+    
+    <item>
+      <title>Como fazer deploy da sua aplicação com o Helm</title>
+      <link>https://fmaced1.github.io/post/deploy-com-o-helm-copy/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/deploy-com-o-helm-copy/</guid>
+      <description>Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file content/post/hello-hugo.md has been converted into a complete HTML document by Hugo. Isn&amp;rsquo;t that pretty nifty?
+A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
+You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
+Showing off with Markdown A full cheat sheet can be found here or through Google.</description>
+    </item>
+    
+    <item>
+      <title>Como fazer o seu próprio chatbot em python com o ChatterBot</title>
+      <link>https://fmaced1.github.io/post/como-fazer-um-chatbot/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/como-fazer-um-chatbot/</guid>
+      <description>Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file content/post/hello-hugo.md has been converted into a complete HTML document by Hugo. Isn&amp;rsquo;t that pretty nifty?
+A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
+You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
+Showing off with Markdown A full cheat sheet can be found here or through Google.</description>
+    </item>
+    
+    <item>
+      <title>Como se preparar para o exame CKA (Certified Kubernetes Administrator)</title>
+      <link>https://fmaced1.github.io/post/preparacao-para-o-cka-copy/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/preparacao-para-o-cka-copy/</guid>
+      <description>Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file content/post/hello-hugo.md has been converted into a complete HTML document by Hugo. Isn&amp;rsquo;t that pretty nifty?
+A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
+You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
+Showing off with Markdown A full cheat sheet can be found here or through Google.</description>
+    </item>
+    
+    <item>
+      <title>Fazendo o download dos dados historicos de acoes usando o yfinance</title>
+      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
+      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado ja usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
+Pesquisando sobre o tema vi que grandes bancos ja usam essas e outras tecnologias para ajudar na tomada de decisao ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as acoes da bolsa brasileira de forma massiva e me mostrasse apenas aquelas acoes que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parametros.</description>
+    </item>
+    
     <item>
       <title>Archive</title>
       <link>https://fmaced1.github.io/archives/</link>

@@ -4,6 +4,61 @@
     <title>Categories on fmaced1</title>
     <link>https://fmaced1.github.io/categories/</link>
     <description>Recent content in Categories on fmaced1</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://fmaced1.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cka</title>
+      <link>https://fmaced1.github.io/categories/cka/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/categories/cka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>helm</title>
+      <link>https://fmaced1.github.io/categories/helm/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/categories/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://fmaced1.github.io/categories/kubernetes/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://fmaced1.github.io/categories/python/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>telegram</title>
+      <link>https://fmaced1.github.io/categories/telegram/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/categories/telegram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://fmaced1.github.io/categories/tutorial/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

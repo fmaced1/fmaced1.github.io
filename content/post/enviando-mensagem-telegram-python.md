@@ -14,8 +14,6 @@ cover:
     caption: "Python Telegram Bot"
 ShowToc: true
 TocOpen: false
-author: "fmaced1"
-draft: true
 ---
 
 Hello from Hugo! If you're reading this in your browser, good job! The file `content/post/hello-hugo.md` has been

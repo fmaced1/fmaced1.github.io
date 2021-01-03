@@ -12,7 +12,6 @@ cover:
     caption: "Yahoo! Finance market data downloader"
 ShowToc: true
 TocOpen: false
-draft: true
 ---
 
 Intro
