@@ -13,53 +13,54 @@ cover:
     caption: "Yahoo! Finance market data downloader"
 ShowToc: true
 TocOpen: false
+author: "fmaced1"
+draft: true
 ---
 
-Hello from Hugo! If you're reading this in your browser, good job! The file `content/post/hello-hugo.md` has been
-converted into a complete HTML document by Hugo. Isn't that pretty nifty?
-
-A Section
+Intro
 ---------
 
-Here's a simple titled section where you can place whatever information you want.
+Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo [HFT's (High-Frequency Trading)](https://www.investopedia.com/terms/h/high-frequency-trading.asp#:~:text=High%2Dfrequency%20trading%2C%20also%20known,orders%20based%20on%20market%20conditions.) e [Quantitative Trading](https://www.investopedia.com/terms/q/quantitative-trading.asp), temas que unem o melhor do mercado de tecnologia e financeiro.
 
-You can use inline HTML if you want, but really there's not much that Markdown can't do.
+Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal "interessante" com base em alguns parametros.
 
-Showing off with Markdown
+> Bom, mas como e onde conseguir os dados para fazer essas análises? 🤔
+
+Navegando bastante entre um post e outro encontrei o post do [Ran Aroussi](https://aroussi.com/post/python-yahoo-finance) criador dessa lib fantástica escrita em python, era exatamente o que eu precisava para começar o meu projeto de bot que iria fazer todo o trabalho chato no meu lugar 😁
+
+Como instalar e usar a lib yfinance
 -------------------------
 
-A full cheat sheet can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-or through [Google](https://google.com/).
+Para usar a lib yfinance você vai precisar ter o **python >=3.4** e o **pip** instalado, [veja aqui como instalar]()
 
-There are some *easy* examples for styling, though. I can't **emphasize** that enough.
-Creating [links](https://google.com/) or `inline code` blocks are very straightforward.
+Com o python e pip instalados, execute o comando à seguir no terminal:
 
-```
-There are some *easy* examples for styling, though. I can't **emphasize** that enough.
-Creating [links](https://google.com/) or `inline code` blocks are very straightforward.
+```terminal
+pip install yfinance --upgrade --no-cache-dir
 ```
 
-Front Matter for Fun
+Pronto, agora você já consegue começar a usar.
+
+Fazendo o download de dados históricos uma ação por vez
 --------------------
 
-This is the meta data for this post. It is located at the top of the `content/post/hello-hugo.md` markdown file.
+```python
+import yfinance as yf
 
-```
----
-title: "Hello Hugo!"
-description: "Saying 'Hello' from Hugo"
-date: "2014-09-01"
-categories:
-  - "example"
-  - "hello"
-tags:
-  - "example"
-  - "hugo"
-  - "blog"
----
-```
+ticker = "VALE3.SA"
+period = "1y"
+interval = "1wk"
 
-This section, called 'Front Matter', is what tells Hugo about the content in this file: the `title` of the item, the
-`description`, and the `date` it was posted. In our example, we've added two custom bits of data too. The `categories` and
-`tags` sections are used in this example for indexing/grouping content. You will learn more about what that means by
-examining the code in this example and through reading the Hugo [documentation](http://gohugo.io/overview/introduction).
+historical_data = yf.Ticker(ticker).history(period, interval, actions=False).dropna()
+
+print(historical_data)
+
+"""              Open    High    Low    Close      Volume  Dividends  Splits
+Date
+1986-03-13    0.06    0.07    0.06    0.07  1031788800        0.0     0.0
+1986-03-14    0.07    0.07    0.07    0.07   308160000        0.0     0.0
+...
+2019-04-15  120.94  121.58  120.57  121.05    15792600        0.0     0.0
+2019-04-16  121.64  121.65  120.10  120.77    14059700        0.0     0.0
+"""
+```

@@ -14,6 +14,8 @@ cover:
     caption: "Foto de [Flo Dahm](https://www.pexels.com/pt-br/foto/aventura-barco-barco-a-vela-bote-2420412/) no Pexels"
 ShowToc: true
 TocOpen: false
+author: "fmaced1"
+draft: true
 ---
 
 Hello from Hugo! If you're reading this in your browser, good job! The file `content/post/hello-hugo.md` has been
