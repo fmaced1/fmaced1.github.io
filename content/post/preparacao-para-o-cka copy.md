@@ -1,7 +1,7 @@
 ---
-title: "Como se preparar para o exame CKA (Certified Kubernetes Administrator)"
-description: "Como se preparar para o exame CKA (Certified Kubernetes Administrator)"
-date: "2020-12-26"
+title: "Dicas para passar no exame CKA (Certified Kubernetes Administrator)"
+description: "Dicas para passar no exame CKA (Certified Kubernetes Administrator)"
+date: "2020-01-07"
 categories:
   - "kubernetes"
   - "cka"
@@ -10,57 +10,87 @@ tags:
   - "cka"
 cover:
     image: "https://miro.medium.com/max/700/1*A6Ka4665MBUJk44LBQHvKA.jpeg"
-    alt: "ChatterBot: Machine learning in Python"
-    caption: "ChatterBot: Machine learning in Python"
+    alt: ""
+    caption: ""
 ShowToc: true
 TocOpen: false
 ---
 
-Hello from Hugo! If you're reading this in your browser, good job! The file `content/post/hello-hugo.md` has been
-converted into a complete HTML document by Hugo. Isn't that pretty nifty?
+Intro
 
-A Section
----------
+Esse é um guia para servir de base para os seus estudos e preparação para a prova do CKA.
 
-Here's a simple titled section where you can place whatever information you want.
+Dicas para a prova:
 
-You can use inline HTML if you want, but really there's not much that Markdown can't do.
+https://ravikirans.com/cka-kubernetes-exam-study-guide/
+https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e
+https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/
 
-Showing off with Markdown
--------------------------
+### Split de tela
 
-A full cheat sheet can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-or through [Google](https://google.com/).
+![](https://www.ocf.berkeley.edu/~ckuehl/tmux/tmux.png)
 
-There are some *easy* examples for styling, though. I can't **emphasize** that enough.
-Creating [links](https://google.com/) or `inline code` blocks are very straightforward.
+[tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/)
 
-```
-There are some *easy* examples for styling, though. I can't **emphasize** that enough.
-Creating [links](https://google.com/) or `inline code` blocks are very straightforward.
-```
+```terminal
+sudo apt-get install tmux
 
-Front Matter for Fun
---------------------
+{prefix} = ctrl + b
 
-This is the meta data for this post. It is located at the top of the `content/post/hello-hugo.md` markdown file.
+{prefix} "  ==> split window horizontally
+{prefix} %  ==> split window horizontally
+{prefix} {Arrow-Key} ==> switch pane
+{prefix} c  ==> create new window
+{prefix} p  ==> move to previous window
+{prefix} n  ==> move to next window
+{prefix} {Page-up-Key} ==> scroll-up the pane within tmux
+{prefix} q  ==> to quickly flash pane numbers for easy reference to a particular pane
+{Ctrl} d  ==> to exit current pane
 
-```
----
-title: "Hello Hugo!"
-description: "Saying 'Hello' from Hugo"
-date: "2014-09-01"
-categories:
-  - "example"
-  - "hello"
-tags:
-  - "example"
-  - "hugo"
-  - "blog"
----
+Hold {prefix} and use {Arrow-Key} to increase/decrease the size of current pane
 ```
 
-This section, called 'Front Matter', is what tells Hugo about the content in this file: the `title` of the item, the
-`description`, and the `date` it was posted. In our example, we've added two custom bits of data too. The `categories` and
-`tags` sections are used in this example for indexing/grouping content. You will learn more about what that means by
-examining the code in this example and through reading the Hugo [documentation](http://gohugo.io/overview/introduction).
+### Deletar objetos pode te custar alguns segundos
+
+Aqui vai uma dica quase ninguem fala e me ajudou, deletar objetos no kubernetes pode demorar alguns
+segundos principalmente quando tem algum volume, no caso de deployment ou pod.
+
+```
+kubectl -f delete objeto.yaml ; ctrl+z + bg
+```
+
+O comando ctrl+z + bg coloca o comando anterior em backgroud e te libera a linha de comando para ir editando
+o yml e isso economiza muito tempo, mesmo.
+
+Se quiser voltar o comando para foreground, só digitar:
+
+```
+fg
+```
+
+### Mastering VIM - ctrl+c ctrl+v, find, go to top down, indentacao em bloco, replace
+
+```
+Mark lines: Esc+V (then arrow keys)
+Copy marked lines: y
+Cut marked lines: d
+Past lines: p or P
+```
+
+### Anote as respostas
+
+```bash
+for i in $(seq 1 24);do echo "$i - " ;done
+
+#Pergunta - Peso - OK SKIP
+1 - 2 OK
+2 - 4 OK
+3 - 8 SKIP
+4 - 4 
+5 - 8 
+```
+### Gerenciar o tempo eh a chave
+### Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.
+### Seu documento deve estar dentro do prazo de validade
+### Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade
+### kubectl --dry-run, kubecl explain
