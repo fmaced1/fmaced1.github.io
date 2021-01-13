@@ -28,10 +28,10 @@ import telegram class Telebot: def __init__(self): self.bot_token = &amp;#39;tok
     
     <item>
       <title>Como fazer deploy da sua aplicação com o Helm</title>
-      <link>https://fmaced1.github.io/post/deploy-com-o-helm-copy/</link>
+      <link>https://fmaced1.github.io/post/deploy-com-o-helm/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fmaced1.github.io/post/deploy-com-o-helm-copy/</guid>
+      <guid>https://fmaced1.github.io/post/deploy-com-o-helm/</guid>
       <description>Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file content/post/hello-hugo.md has been converted into a complete HTML document by Hugo. Isn&amp;rsquo;t that pretty nifty?
 A Section Here&amp;rsquo;s a simple titled section where you can place whatever information you want.
 You can use inline HTML if you want, but really there&amp;rsquo;s not much that Markdown can&amp;rsquo;t do.
@@ -52,10 +52,10 @@ Showing off with Markdown A full cheat sheet can be found here or through Google
     
     <item>
       <title>Dicas para passar no exame CKA (Certified Kubernetes Administrator)</title>
-      <link>https://fmaced1.github.io/post/preparacao-para-o-cka-copy/</link>
+      <link>https://fmaced1.github.io/post/preparacao-para-o-cka/</link>
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fmaced1.github.io/post/preparacao-para-o-cka-copy/</guid>
+      <guid>https://fmaced1.github.io/post/preparacao-para-o-cka/</guid>
       <description>Intro
 Esse é um guia para servir de base para os seus estudos e preparação para a prova do CKA.
 Dicas para a prova:
