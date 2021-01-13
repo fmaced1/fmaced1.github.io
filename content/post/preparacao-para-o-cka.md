@@ -20,15 +20,15 @@ Intro
 
 Esse é um guia para servir de base para os seus estudos e preparação para a prova do CKA.
 
-Dicas para a prova:
-
-https://ravikirans.com/cka-kubernetes-exam-study-guide/
-https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e
-https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/
-
+Links oficiais sobre a cka:
 
 - Sobre a certificação [[Link]](https://www.cncf.io/certification/cka/)
 - O que cai na prova? [[Link]](https://github.com/cncf/curriculum)
+
+Links úteis para estudar:
+- https://ravikirans.com/cka-kubernetes-exam-study-guide/
+- https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e
+- https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/
 
 |Domain                                             |Weight  | 
 |:------------------------------------------------- |:-------|
@@ -147,7 +147,7 @@ kubectl create deploy nginx --image nginx $dry > deploy.yaml
 
 ```
 ### Como usar o ctrl + r p procurar no historico
-### Gerenciar o tempo eh a chave
+### Gerenciar o tempo entre perguntas é a chave
 ### Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.
 ### Seu documento deve estar dentro do prazo de validade
 ### Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade
