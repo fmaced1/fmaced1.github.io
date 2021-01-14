@@ -38,36 +38,21 @@ Links úteis para estudar:
 |Workloads & Scheduling	                            |15%
 |Storage	                                          |10%
 
-### 0# Não faça o tutorial kubernetes-the-hard-way logo de início
+### Não faça o tutorial kubernetes-the-hard-way logo de início
 
-O tutorial do [@kelseyhightower](https://github.com/kelseyhightower) é excelente, porém fazer ele antes de entender os conceitos básicos do kubernetes, só vai gastar o seu tempo e te deixar mais confuso.
+O tutorial do [@kelseyhightower](https://github.com/kelseyhightower) é excelente, porém acredito que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez quando terminar.
 
-Mas depois de um tempo de estudo, aconselho sim que execute o tutorial pelo menos 2 vezes, tente não entrar em um modo automático, apenas copiando e colando os comandos.
+Depois de um tempo de estudo, quando já estiver entendendo como funciona os principais componentes, aconselho sim que execute o tutorial pelo menos 2 vezes, tente não entrar em um modo automático, apenas copiando e colando os comandos.
 
 [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
-### 1# Anote as respostas
-
-```bash
-for i in $(seq 1 24);do echo "$i - " ;done
-
-#Pergunta - Peso - OK SKIP
-1 - 2 OK
-2 - 4 OK
-3 - 8 SKIP
-4 - 4 
-5 - 8
-...
-24 - 3
-```
-
-### 2# Os atalhos mais usados do vim
+### Os atalhos mais usados do vim
 
 ![How to exit vim editor?](https://149351115.v2.pressablecdn.com/wp-content/uploads/2017/05/exitvim-1024x455.png)
 
-O vim é um editor derivado do vi presente na maioria das distribuições linux e unix, bem complexo, mas muito eficiente.
+O vim é um editor derivado do vi presente na maioria das distribuições linux e unix, bem complexo, mas muito eficiente, no exame você terá apenas uma aba com um terminal linux no caso um ubuntu.
 
-Dominar o vim vai te ajudar muito a economizar um tempo precioso na hora do seu exame, acredite 2 horas não dá pra nada :)
+Dominar o vim vai te ajudar muito a economizar um tempo precioso na hora do seu exame, acredite 2 horas não dá pra nada, já que são 24 perguntas totalmente práticas :)
 
 | Comandos                    | Descrição    |
 |:--------------------------- |:-------------|
@@ -80,9 +65,9 @@ Dominar o vim vai te ajudar muito a economizar um tempo precioso na hora do seu 
 |esc gg                       | Move o cursor para a primeira linha do arquivo
 |esc : set number             | Habilita a numeração das linhas do arquivo
 |esc G                        | Move para o final do arquivo
-|esc /groselha                | Procura pela palavra groselha no arquivo
-|esc /groselha + n            | Pula para a próxima ocorrência
-|esc /groselha + N            | Pula para a ocorrência anterior
+|esc /texto_exemplo           | Procura pela palavra texto_exemplo no arquivo
+|esc /texto_exemplo + n       | Pula para a próxima ocorrência
+|esc /texto_exemplo + N       | Pula para a ocorrência anterior
 
 Com esses comandos você consegue copiar, colar e apagar blocos de código:
 
@@ -93,7 +78,7 @@ Com esses comandos você consegue copiar, colar e apagar blocos de código:
 |d                                 | Apaga as linhas selecionadas
 |p ou P                            | Cola as linhas selecionadas
 
-### 3# Como splitar a tela com o TMUX
+### Como splitar a tela com o TMUX
 
 ![](https://www.ocf.berkeley.edu/~ckuehl/tmux/tmux.png)
 
@@ -118,7 +103,7 @@ ctrl + b + {Arrow-Key}      Aumenta ou diminui o tamanho da janela atual
 ctrl + d                    Sai da janela atual
 ```
 
-### 4# Deletar objetos pode te custar alguns segundos
+### Deletar objetos pode te custar alguns segundos
 
 Aqui vai uma dica quase ninguem fala e me ajudou, deletar objetos no kubernetes pode demorar alguns
 segundos principalmente quando tem algum volume, no caso de deployment ou pod.
@@ -136,16 +121,43 @@ Se quiser voltar o comando para foreground, só digitar:
 fg
 ```
 
-### kubectl --dry-run, kubecl explain
-```bash
+### Kubectl aliases e autocompletion
 
+Sem dúvida os aliases mais importantes são o ```k="kubectl"``` e o ```$dry```, não usei muitos aliases como nesse [projeto](https://github.com/ahmetb/kubectl-aliases), porque sinceramente não achei que valesse muito a pena, afinal iria acabar perdendo mais tempo tentando lembrar dos comandos do que realmente fazendo o que precisava.
+
+```bash
 export dry="--dry-run=client -o yaml"
 
+# Cria um yaml com o manifest de um pod nginx
 kubectl run nginx --image nginx $dry > nginx_pod.yaml
 
+# Mesmo que o anterior, porém aqui cria um deployment ao invés de um pod
 kubectl create deploy nginx --image nginx $dry > deploy.yaml
-
 ```
+
+E para habilitar o autocomplete do kubectl, aqui está o link da [documentação oficial](https://kubernetes.io/docs/tasks/tools/install-kubectl/#enable-kubectl-autocompletion) 
+
+```bash
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
+```
+
+### Anote as respostas
+
+```bash
+for i in $(seq 1 24);do echo "$i - " ;done
+
+#Pergunta - Peso - OK SKIP
+1 - 2 OK
+2 - 4 OK
+3 - 8 SKIP
+4 - 4 
+5 - 8
+...
+24 - 3
+```
+
 ### Como usar o ctrl + r p procurar no historico
 ### Gerenciar o tempo entre perguntas é a chave
 ### Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.

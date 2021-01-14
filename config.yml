@@ -5,7 +5,7 @@ theme: hugo-PaperMod
 enableInlineShortcodes: true
 enableRobotsTXT: true
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-DD5NMEEPJ1
 
 minify:
     disableXML: true
@@ -34,7 +34,7 @@ outputs:
         - JSON
 
 params:
-    env: production
+    env: prod
     description: "Description"
     author: fmaced1
     # author: ["Me", "You"] # multiple authors
