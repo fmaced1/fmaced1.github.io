@@ -1,12 +1,13 @@
 ---
 title: "Fazendo o download dos dados históricos de ações usando o yfinance"
 description: "Fazendo o download dos dados históricos de ações usando o yfinance"
-date: "2021-01-03"
+date: "2021-01-17"
 categories:
   - "python"
 tags:
   - "python"
   - "financial analisys"
+  - "Financial Advisor Bot"
 cover:
     image: "https://repository-images.githubusercontent.com/91948540/e2b14a80-7fc7-11e9-8b9b-5e1f56b0052a"
     alt: "Yahoo! Finance market data downloader"
@@ -66,3 +67,7 @@ Date
 2020-01-26  49.587132  49.999879  47.801764  48.252907  138220500.0
 """
 ```
+
+Vou fazer uma série de posts, mostrando as soluções que estou usando na construção desse "advisor", irei organizar todos os posts dessa série na tag [Financial Advisor Bot](../../tags/financial-advisor-bot/).
+
+[Click aqui para ir para o próximo post.](../como-fazer-cache-de-objetos-json-com-python/)
