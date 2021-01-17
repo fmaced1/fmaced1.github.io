@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Dicas para passar no exame CKA (Certified Kubernetes Administrator) | fmaced1</title>
 
-<meta name="keywords" content="kubernetes, cka" />
+<meta name="keywords" content="Kubernetes, CKA" />
 <meta name="description" content="Dicas para passar no exame CKA (Certified Kubernetes Administrator)">
 <meta name="author" content="fmaced1">
 <link rel="canonical" href="https://fmaced1.github.io/post/preparacao-para-o-cka/" />
@@ -54,7 +54,7 @@ if (!doNotTrack) {
   "name": "Dicas para passar no exame CKA (Certified Kubernetes Administrator)",
   "description": "Intro\nEsse é um guia para servir de base para os seus estudos e preparação para a prova do CKA.\nLinks oficiais sobre a cka:\n Sobre a certificação [Link] O que cai na prova? [Link] …",
   "keywords": [
-    "kubernetes", "cka"
+    "Kubernetes", "CKA"
   ],
   "articleBody": "Intro\nEsse é um guia para servir de base para os seus estudos e preparação para a prova do CKA.\nLinks oficiais sobre a cka:\n Sobre a certificação [Link] O que cai na prova? [Link]  Links úteis para estudar:\n https://ravikirans.com/cka-kubernetes-exam-study-guide/ https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/     Domain Weight     Troubleshooting 30%   Cluster Architecture, Installation \u0026 Configuration 25%   Services \u0026 Networking 20%   Workloads \u0026 Scheduling 15%   Storage 10%    Não faça o tutorial kubernetes-the-hard-way logo de início O tutorial do @kelseyhightower é excelente, porém acredito que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez quando terminar.\nDepois de um tempo de estudo, quando já estiver entendendo como funciona os principais componentes, aconselho sim que execute o tutorial pelo menos 2 vezes, tente não entrar em um modo automático, apenas copiando e colando os comandos.\nhttps://github.com/kelseyhightower/kubernetes-the-hard-way\nOs atalhos mais usados do vim O vim é um editor derivado do vi presente na maioria das distribuições linux e unix, bem complexo, mas muito eficiente, no exame você terá apenas uma aba com um terminal linux no caso um ubuntu.\nDominar o vim vai te ajudar muito a economizar um tempo precioso na hora do seu exame, acredite 2 horas não dá pra nada, já que são 24 perguntas totalmente práticas :)\n   Comandos Descrição     i Habilita a inserção de texto onde está o cursor   esc : q ! Sai do vim confirmando que não quer salvar (Mais usado)   esc : w q ! Salva e sai do vim   esc d 99 d Apaga 99 linhas à partir do cursor   esc dd Apaga a linha inteira onde o cursor está   esc : % s/x/y/g Faz o replace de x por y em todas as vezes que x aparece no arquivo   esc gg Move o cursor para a primeira linha do arquivo   esc : set number Habilita a numeração das linhas do arquivo   esc G Move para o final do arquivo   esc /texto_exemplo Procura pela palavra texto_exemplo no arquivo   esc /texto_exemplo + n Pula para a próxima ocorrência   esc /texto_exemplo + N Pula para a ocorrência anterior    Com esses comandos você consegue copiar, colar e apagar blocos de código:\n   Comandos Descrição     esc + V + (seta cima / baixo) Seleciona as linhas que serão copiadas   y copia as linhas selecionadas   d Apaga as linhas selecionadas   p ou P Cola as linhas selecionadas    Como splitar a tela com o TMUX tmux\nsudo apt-get install tmux {prefix} = ctrl + b ctrl + b + \" Divide a janela na horizontal ctrl + b + % Divide a janela na horizontal ctrl + b + {Arrow-Key} Muda de janela ctrl + b + c Cria uma nova janela ctrl + b + p Pula para a janela anterior ctrl + b + n Pula para a proxima janela ctrl + b + {Page-up-Key} Desliza a pagina na janela atual ctrl + b + {Arrow-Key} Aumenta ou diminui o tamanho da janela atual ctrl + d Sai da janela atual Deletar objetos pode te custar alguns segundos Aqui vai uma dica quase ninguem fala e me ajudou, deletar objetos no kubernetes pode demorar alguns segundos principalmente quando tem algum volume, no caso de deployment ou pod.\nkubectl -f delete objeto.yaml ; ctrl+z + bg O comando ctrl+z + bg coloca o comando anterior em backgroud e te libera a linha de comando para ir editando o yml e isso economiza muito tempo, mesmo.\nSe quiser voltar o comando para foreground, só digitar:\nfg Kubectl aliases e autocompletion Sem dúvida os aliases mais importantes são o k=\"kubectl\" e o $dry, não usei muitos aliases como nesse projeto, porque sinceramente não achei que valesse muito a pena, afinal iria acabar perdendo mais tempo tentando lembrar dos comandos do que realmente fazendo o que precisava.\nexport dry=\"--dry-run=client -o yaml\" # Cria um yaml com o manifest de um pod nginx kubectl run nginx --image nginx $dry  nginx_pod.yaml # Mesmo que o anterior, porém aqui cria um deployment ao invés de um pod kubectl create deploy nginx --image nginx $dry  deploy.yaml E para habilitar o autocomplete do kubectl, aqui está o link da documentação oficial\necho 'source ~/.bashrc echo 'alias k=kubectl' ~/.bashrc echo 'complete -F __start_kubectl k' ~/.bashrc Anote as respostas for i in $(seq 1 24);do echo \"$i- \" ;done #Pergunta - Peso - OK SKIP 1 - 2 OK 2 - 4 OK 3 - 8 SKIP 4 - 4 5 - 8 ... 24 - 3 Como usar o ctrl + r p procurar no historico Gerenciar o tempo entre perguntas é a chave Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera. Seu documento deve estar dentro do prazo de validade Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade ",
   "wordCount" : "805",
@@ -181,12 +181,14 @@ January 7, 2020&nbsp;·&nbsp;4 min&nbsp;·&nbsp;fmaced1
         <a href="#como-splitar-a-tela-com-o-tmux" aria-label="Como splitar a tela com o TMUX">Como splitar a tela com o TMUX</a></li><li>
         <a href="#deletar-objetos-pode-te-custar-alguns-segundos" aria-label="Deletar objetos pode te custar alguns segundos">Deletar objetos pode te custar alguns segundos</a></li><li>
         <a href="#kubectl-aliases-e-autocompletion" aria-label="Kubectl aliases e autocompletion">Kubectl aliases e autocompletion</a></li><li>
-        <a href="#anote-as-respostas" aria-label="Anote as respostas">Anote as respostas</a></li><li>
+        <a href="#anote-as-respostas" aria-label="Anote as respostas">Anote as respostas</a><ul>
+            <li>
         <a href="#como-usar-o-ctrl--r-p-procurar-no-historico" aria-label="Como usar o ctrl &#43; r p procurar no historico">Como usar o ctrl + r p procurar no historico</a></li><li>
         <a href="#gerenciar-o-tempo-entre-perguntas-%c3%a9-a-chave" aria-label="Gerenciar o tempo entre perguntas é a chave">Gerenciar o tempo entre perguntas é a chave</a></li><li>
         <a href="#tenha-uma-maquina-windows-de-reserva-macbook-da-problema-pra-compartilhar-a-camera" aria-label="Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.">Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.</a></li><li>
         <a href="#seu-documento-deve-estar-dentro-do-prazo-de-validade" aria-label="Seu documento deve estar dentro do prazo de validade">Seu documento deve estar dentro do prazo de validade</a></li><li>
         <a href="#n%c3%a3o-fa%c3%a7a-a-prova-de-frente-para-uma-janela-isso-pode-atrapalhar-a-visibilidade" aria-label="Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade">Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade</a></li></ul>
+</li></ul>
       </blockquote>
     </details>
   </div>
@@ -234,11 +236,11 @@ January 7, 2020&nbsp;·&nbsp;4 min&nbsp;·&nbsp;fmaced1
 </tr>
 </tbody>
 </table>
-<h3 id="não-faça-o-tutorial-kubernetes-the-hard-way-logo-de-início">Não faça o tutorial kubernetes-the-hard-way logo de início<a hidden class="anchor" aria-hidden="true" href="#não-faça-o-tutorial-kubernetes-the-hard-way-logo-de-início">#</a></h3>
+<h2 id="não-faça-o-tutorial-kubernetes-the-hard-way-logo-de-início">Não faça o tutorial kubernetes-the-hard-way logo de início<a hidden class="anchor" aria-hidden="true" href="#não-faça-o-tutorial-kubernetes-the-hard-way-logo-de-início">#</a></h2>
 <p>O tutorial do <a href="https://github.com/kelseyhightower">@kelseyhightower</a> é excelente, porém acredito que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez quando terminar.</p>
 <p>Depois de um tempo de estudo, quando já estiver entendendo como funciona os principais componentes, aconselho sim que execute o tutorial pelo menos 2 vezes, tente não entrar em um modo automático, apenas copiando e colando os comandos.</p>
 <p><a href="https://github.com/kelseyhightower/kubernetes-the-hard-way">https://github.com/kelseyhightower/kubernetes-the-hard-way</a></p>
-<h3 id="os-atalhos-mais-usados-do-vim">Os atalhos mais usados do vim<a hidden class="anchor" aria-hidden="true" href="#os-atalhos-mais-usados-do-vim">#</a></h3>
+<h2 id="os-atalhos-mais-usados-do-vim">Os atalhos mais usados do vim<a hidden class="anchor" aria-hidden="true" href="#os-atalhos-mais-usados-do-vim">#</a></h2>
 <p><img src="https://149351115.v2.pressablecdn.com/wp-content/uploads/2017/05/exitvim-1024x455.png" alt="How to exit vim editor?"></p>
 <p>O vim é um editor derivado do vi presente na maioria das distribuições linux e unix, bem complexo, mas muito eficiente, no exame você terá apenas uma aba com um terminal linux no caso um ubuntu.</p>
 <p>Dominar o vim vai te ajudar muito a economizar um tempo precioso na hora do seu exame, acredite 2 horas não dá pra nada, já que são 24 perguntas totalmente práticas :)</p>
@@ -327,7 +329,7 @@ January 7, 2020&nbsp;·&nbsp;4 min&nbsp;·&nbsp;fmaced1
 </tr>
 </tbody>
 </table>
-<h3 id="como-splitar-a-tela-com-o-tmux">Como splitar a tela com o TMUX<a hidden class="anchor" aria-hidden="true" href="#como-splitar-a-tela-com-o-tmux">#</a></h3>
+<h2 id="como-splitar-a-tela-com-o-tmux">Como splitar a tela com o TMUX<a hidden class="anchor" aria-hidden="true" href="#como-splitar-a-tela-com-o-tmux">#</a></h2>
 <p><img src="https://www.ocf.berkeley.edu/~ckuehl/tmux/tmux.png" alt=""></p>
 <p><a href="https://www.ocf.berkeley.edu/~ckuehl/tmux/">tmux</a></p>
 <pre><code class="language-terminal" data-lang="terminal">sudo apt-get install tmux
@@ -343,7 +345,7 @@ ctrl + b + {Page-up-Key}    Desliza a pagina na janela atual
 ctrl + b + {Arrow-Key}      Aumenta ou diminui o tamanho da janela atual                  
 
 ctrl + d                    Sai da janela atual
-</code></pre><h3 id="deletar-objetos-pode-te-custar-alguns-segundos">Deletar objetos pode te custar alguns segundos<a hidden class="anchor" aria-hidden="true" href="#deletar-objetos-pode-te-custar-alguns-segundos">#</a></h3>
+</code></pre><h2 id="deletar-objetos-pode-te-custar-alguns-segundos">Deletar objetos pode te custar alguns segundos<a hidden class="anchor" aria-hidden="true" href="#deletar-objetos-pode-te-custar-alguns-segundos">#</a></h2>
 <p>Aqui vai uma dica quase ninguem fala e me ajudou, deletar objetos no kubernetes pode demorar alguns
 segundos principalmente quando tem algum volume, no caso de deployment ou pod.</p>
 <pre><code>kubectl -f delete objeto.yaml ; ctrl+z + bg
@@ -351,7 +353,7 @@ segundos principalmente quando tem algum volume, no caso de deployment ou pod.</
 o yml e isso economiza muito tempo, mesmo.</p>
 <p>Se quiser voltar o comando para foreground, só digitar:</p>
 <pre><code>fg
-</code></pre><h3 id="kubectl-aliases-e-autocompletion">Kubectl aliases e autocompletion<a hidden class="anchor" aria-hidden="true" href="#kubectl-aliases-e-autocompletion">#</a></h3>
+</code></pre><h2 id="kubectl-aliases-e-autocompletion">Kubectl aliases e autocompletion<a hidden class="anchor" aria-hidden="true" href="#kubectl-aliases-e-autocompletion">#</a></h2>
 <p>Sem dúvida os aliases mais importantes são o <code>k=&quot;kubectl&quot;</code> e o <code>$dry</code>, não usei muitos aliases como nesse <a href="https://github.com/ahmetb/kubectl-aliases">projeto</a>, porque sinceramente não achei que valesse muito a pena, afinal iria acabar perdendo mais tempo tentando lembrar dos comandos do que realmente fazendo o que precisava.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export dry<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--dry-run=client -o yaml&#34;</span>
 
@@ -364,7 +366,7 @@ kubectl create deploy nginx --image nginx $dry &gt; deploy.yaml
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;source &lt;(kubectl completion bash)&#39;</span> &gt;&gt;~/.bashrc
 echo <span style="color:#e6db74">&#39;alias k=kubectl&#39;</span> &gt;&gt;~/.bashrc
 echo <span style="color:#e6db74">&#39;complete -F __start_kubectl k&#39;</span> &gt;&gt;~/.bashrc
-</code></pre></div><h3 id="anote-as-respostas">Anote as respostas<a hidden class="anchor" aria-hidden="true" href="#anote-as-respostas">#</a></h3>
+</code></pre></div><h2 id="anote-as-respostas">Anote as respostas<a hidden class="anchor" aria-hidden="true" href="#anote-as-respostas">#</a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>seq <span style="color:#ae81ff">1</span> 24<span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span> echo <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74"> - &#34;</span> ;<span style="color:#66d9ef">done</span>
 
 <span style="color:#75715e">#Pergunta - Peso - OK SKIP</span>
@@ -384,8 +386,8 @@ echo <span style="color:#e6db74">&#39;complete -F __start_kubectl k&#39;</span> 
 </div>
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://fmaced1.github.io/tags/kubernetes/">kubernetes</a></li>
-      <li><a href="https://fmaced1.github.io/tags/cka/">cka</a></li>
+      <li><a href="https://fmaced1.github.io/tags/kubernetes/">Kubernetes</a></li>
+      <li><a href="https://fmaced1.github.io/tags/cka/">CKA</a></li>
     </ul>
 
 
@@ -395,7 +397,7 @@ echo <span style="color:#e6db74">&#39;complete -F __start_kubectl k&#39;</span> 
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share Dicas para passar no exame CKA (Certified Kubernetes Administrator) on twitter"
-        href="https://twitter.com/intent/tweet/?text=Dicas%20para%20passar%20no%20exame%20CKA%20%28Certified%20Kubernetes%20Administrator%29&amp;url=https%3a%2f%2ffmaced1.github.io%2fpost%2fpreparacao-para-o-cka%2f&amp;hashtags=kubernetes%2ccka">
+        href="https://twitter.com/intent/tweet/?text=Dicas%20para%20passar%20no%20exame%20CKA%20%28Certified%20Kubernetes%20Administrator%29&amp;url=https%3a%2f%2ffmaced1.github.io%2fpost%2fpreparacao-para-o-cka%2f&amp;hashtags=Kubernetes%2cCKA">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />

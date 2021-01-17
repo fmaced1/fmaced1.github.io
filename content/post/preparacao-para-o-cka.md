@@ -3,11 +3,11 @@ title: "Dicas para passar no exame CKA (Certified Kubernetes Administrator)"
 description: "Dicas para passar no exame CKA (Certified Kubernetes Administrator)"
 date: "2020-01-07"
 categories:
-  - "kubernetes"
-  - "cka"
+  - "Kubernetes"
+  - "CKA"
 tags:
-  - "kubernetes"
-  - "cka"
+  - "Kubernetes"
+  - "CKA"
 cover:
     image: "https://miro.medium.com/max/700/1*A6Ka4665MBUJk44LBQHvKA.jpeg"
     alt: ""
@@ -38,7 +38,7 @@ Links úteis para estudar:
 |Workloads & Scheduling	                            |15%
 |Storage	                                          |10%
 
-### Não faça o tutorial kubernetes-the-hard-way logo de início
+## Não faça o tutorial kubernetes-the-hard-way logo de início
 
 O tutorial do [@kelseyhightower](https://github.com/kelseyhightower) é excelente, porém acredito que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez quando terminar.
 
@@ -46,7 +46,7 @@ Depois de um tempo de estudo, quando já estiver entendendo como funciona os pri
 
 [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
-### Os atalhos mais usados do vim
+## Os atalhos mais usados do vim
 
 ![How to exit vim editor?](https://149351115.v2.pressablecdn.com/wp-content/uploads/2017/05/exitvim-1024x455.png)
 
@@ -78,7 +78,7 @@ Com esses comandos você consegue copiar, colar e apagar blocos de código:
 |d                                 | Apaga as linhas selecionadas
 |p ou P                            | Cola as linhas selecionadas
 
-### Como splitar a tela com o TMUX
+## Como splitar a tela com o TMUX
 
 ![](https://www.ocf.berkeley.edu/~ckuehl/tmux/tmux.png)
 
@@ -103,7 +103,7 @@ ctrl + b + {Arrow-Key}      Aumenta ou diminui o tamanho da janela atual
 ctrl + d                    Sai da janela atual
 ```
 
-### Deletar objetos pode te custar alguns segundos
+## Deletar objetos pode te custar alguns segundos
 
 Aqui vai uma dica quase ninguem fala e me ajudou, deletar objetos no kubernetes pode demorar alguns
 segundos principalmente quando tem algum volume, no caso de deployment ou pod.
@@ -121,7 +121,7 @@ Se quiser voltar o comando para foreground, só digitar:
 fg
 ```
 
-### Kubectl aliases e autocompletion
+## Kubectl aliases e autocompletion
 
 Sem dúvida os aliases mais importantes são o ```k="kubectl"``` e o ```$dry```, não usei muitos aliases como nesse [projeto](https://github.com/ahmetb/kubectl-aliases), porque sinceramente não achei que valesse muito a pena, afinal iria acabar perdendo mais tempo tentando lembrar dos comandos do que realmente fazendo o que precisava.
 
@@ -143,7 +143,7 @@ echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
 ```
 
-### Anote as respostas
+## Anote as respostas
 
 ```bash
 for i in $(seq 1 24);do echo "$i - " ;done

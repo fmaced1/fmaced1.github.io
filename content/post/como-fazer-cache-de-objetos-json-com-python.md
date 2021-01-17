@@ -3,10 +3,10 @@ title: "[Draft] Como fazer cache de objetos json usando python e redis"
 description: "Como fazer cache de objetos json usando python e redis"
 date: "2021-01-17"
 categories:
-  - "python"
+  - "Python"
 tags:
-  - "python"
-  - "financial analisys"
+  - "Python"
+  - "Financial Analisys"
   - "Financial Advisor Bot"
 cover:
     image: "https://hackersandslackers-cdn.storage.googleapis.com/2020/02/_retina/redis-3@2x.jpg"

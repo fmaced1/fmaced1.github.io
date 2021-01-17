@@ -3,11 +3,11 @@ title: "Como fazer deploy da sua aplicação com o Helm"
 description: "Como fazer deploy da sua aplicação com o Helm"
 date: "2020-12-26"
 categories:
-  - "kubernetes"
-  - "helm"
+  - "Kubernetes"
+  - "Helm"
 tags:
-  - "kubernetes"
-  - "helm"
+  - "Kubernetes"
+  - "Helm"
 cover:
     image: "https://images.pexels.com/photos/2420412/pexels-photo-2420412.jpeg"
     alt: "Foto de Flo Dahm no Pexels"

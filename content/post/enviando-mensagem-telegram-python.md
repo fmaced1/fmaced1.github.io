@@ -3,11 +3,11 @@ title: "[Draft] Como enviar mensagens via telegram com python"
 description: "Como enviar mensagens via telegram com python"
 date: "2020-12-26"
 categories:
-  - "telegram"
-  - "python"
+  - "Telegram"
+  - "Python"
 tags:
-  - "telegram"
-  - "python"
+  - "Telegram"
+  - "Python"
 cover:
     image: "https://repository-images.githubusercontent.com/38696925/a761cf00-b652-11ea-881b-09178348f5fd"
     alt: "Python Telegram Bot"

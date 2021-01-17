@@ -3,11 +3,11 @@ title: "Como fazer o seu próprio chatbot em python com o ChatterBot"
 description: "Como fazer o seu próprio chatbot em python com o ChatterBot"
 date: "2020-12-26"
 categories:
-  - "python"
-  - "tutorial"
+  - "Python"
+  - "Tutorial"
 tags:
-  - "python"
-  - "chatbot"
+  - "Python"
+  - "Chatbot"
 cover:
     image: "https://i.imgur.com/b3SCmGT.png"
     alt: "ChatterBot: Machine learning in Python"

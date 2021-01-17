@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>[Draft] Como fazer cache de objetos json usando python e redis | fmaced1</title>
 
-<meta name="keywords" content="python, financial analisys, Financial Advisor Bot" />
+<meta name="keywords" content="Python, Financial Analisys, Financial Advisor Bot" />
 <meta name="description" content="Como fazer cache de objetos json usando python e redis">
 <meta name="author" content="fmaced1">
 <link rel="canonical" href="https://fmaced1.github.io/post/como-fazer-cache-de-objetos-json-com-python/" />
@@ -54,7 +54,7 @@ if (!doNotTrack) {
   "name": "[Draft] Como fazer cache de objetos json usando python e redis",
   "description": "Intro Continuando a série \u0026amp;ldquo;Financial Advisor Bot\u0026amp;rdquo; que inicia nesse post aqui.\nNesse post irei compartilhar a solução de cache que estou usando, bem simples e direto ao …",
   "keywords": [
-    "python", "financial analisys", "Financial Advisor Bot"
+    "Python", "Financial Analisys", "Financial Advisor Bot"
   ],
   "articleBody": "Intro Continuando a série “Financial Advisor Bot” que inicia nesse post aqui.\nNesse post irei compartilhar a solução de cache que estou usando, bem simples e direto ao ponto. O objetivo aqui é mostrar uma solução de cache que é fácil de implementar e que já irá evitar que o seu serviço fique indisponível, e de quebra irá diminuir bastante o seu tempo de resposta.\nPrimeiro, suba uma instância do redis Se você já não tiver uma instância do redis:\nInstale o docker, escolha de acordo com a sua plataforma aqui.\nNesse link você consegue ver as versões disponíveis, crie também, uma conta no docker hub, precisaremos dela para conseguir fazer o download da imagem do redis.\ndocker login docker pull redis # Caso queira outra versão, especifique depois dos : (dois pontos) #docker pull redis:[version] docker network create redis docker run -d --name=redis --network redis -p 6379:6379 redis:latest Usando o redis from _redis import RedisCache expiration_seconds = (60*60)*1 #60s def get_data_history(ticker=str, period=str, interval=str, expiration_seconds=int): try: return RedisCache.get_redis(ticker) except Exception: data = yf.Ticker(ticker).history(period, interval, actions=False).dropna() RedisCache.set_value(ticker, data, expiration_seconds) return RedisCache.get_redis(ticker) ticker = \"STBP3.SA\" period = \"1y\" interval = \"1wk\" get_data_history(ticker, period, interval, expiration_seconds) # _redis.py import redis, pickle, zlib class RedisCache(Object): def __init__(self): redis_client = redis.StrictRedis(host='localhost', port=6379) def set_value(_key, _value, expiration_seconds): \"\"\"[loads json object into redis] Args: _key ([string]): [key must be string] _value ([json]): [Loads json compress with zlib and store into redis] expiration_seconds ([int]): [life time seconds limit for data] \"\"\" redis_client.setex(_key, expiration_seconds, zlib.compress(pickle.dumps(_value))) def get_value(_key): \"\"\"[get content from values] Args: _key ([string]): [get json content from redis] Returns: [dict]: [json content] \"\"\" return pickle.loads(zlib.decompress(redis_client.get(_value))) Como fazer queries no redis? docker exec -it redis redis-cli get VALE3.SA Deletando tudo no redis docker exec -it redis redis-cli FLUSHDB Esse post faz parte da série “Financial Advisor Bot”, mostrando as soluções que estou usando na construção desse “advisor”, irei organizar todos os posts dessa série aqui Financial Advisor Bot.\nClick aqui para ir para o próximo post.\n",
   "wordCount" : "327",
@@ -255,8 +255,8 @@ get_data_history(ticker, period, interval, expiration_seconds)
 </div>
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://fmaced1.github.io/tags/python/">python</a></li>
-      <li><a href="https://fmaced1.github.io/tags/financial-analisys/">financial analisys</a></li>
+      <li><a href="https://fmaced1.github.io/tags/python/">Python</a></li>
+      <li><a href="https://fmaced1.github.io/tags/financial-analisys/">Financial Analisys</a></li>
       <li><a href="https://fmaced1.github.io/tags/financial-advisor-bot/">Financial Advisor Bot</a></li>
     </ul>
 
@@ -267,7 +267,7 @@ get_data_history(ticker, period, interval, expiration_seconds)
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share [Draft] Como fazer cache de objetos json usando python e redis on twitter"
-        href="https://twitter.com/intent/tweet/?text=%5bDraft%5d%20Como%20fazer%20cache%20de%20objetos%20json%20usando%20python%20e%20redis&amp;url=https%3a%2f%2ffmaced1.github.io%2fpost%2fcomo-fazer-cache-de-objetos-json-com-python%2f&amp;hashtags=python%2cfinancialanalisys%2cFinancialAdvisorBot">
+        href="https://twitter.com/intent/tweet/?text=%5bDraft%5d%20Como%20fazer%20cache%20de%20objetos%20json%20usando%20python%20e%20redis&amp;url=https%3a%2f%2ffmaced1.github.io%2fpost%2fcomo-fazer-cache-de-objetos-json-com-python%2f&amp;hashtags=Python%2cFinancialAnalisys%2cFinancialAdvisorBot">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
