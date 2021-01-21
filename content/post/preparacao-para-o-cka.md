@@ -160,7 +160,7 @@ Logo que iniciar o exame, rode esse comando à seguir no terminal:
 for i in $(seq 1 24);do echo "$i - " ;done
 ```
 
-Ele irá gerar 24 linhas no seguinte formato: 
+Isso irá gerar 24 linhas no seguinte formato: 
 
 ```bash
 1 -
