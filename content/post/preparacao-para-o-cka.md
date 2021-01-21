@@ -25,18 +25,20 @@ Links oficiais sobre a cka:
 - Sobre a certificação [[Link]](https://www.cncf.io/certification/cka/)
 - O que cai na prova? [[Link]](https://github.com/cncf/curriculum)
 
+Principais tópicos e seus respectivos pesos:
+
+|Domain                                               |Weight  | 
+|:--------------------------------------------------- |:-------|
+|Troubleshooting	                                  |30%
+|Cluster Architecture, Installation & Configuration	  |25%
+|Services & Networking	                              |20%
+|Workloads & Scheduling	                              |15%
+|Storage	                                          |10%
+
 Links úteis para estudar:
 - https://ravikirans.com/cka-kubernetes-exam-study-guide/
 - https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e
 - https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/
-
-|Domain                                             |Weight  | 
-|:------------------------------------------------- |:-------|
-|Troubleshooting	                                  |30%
-|Cluster Architecture, Installation & Configuration	|25%
-|Services & Networking	                            |20%
-|Workloads & Scheduling	                            |15%
-|Storage	                                          |10%
 
 ## Não faça o tutorial kubernetes-the-hard-way logo de início
 
@@ -84,11 +86,20 @@ Com esses comandos você consegue copiar, colar e apagar blocos de código:
 
 [tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/)
 
-```terminal
-sudo apt-get install tmux
-```
+O tmux não vem instalado por padrão no servidor que é usado no exame, para instalar é bem simples basta rodar isso:
 
 ```terminal
+sudo apt -y install tmux
+
+# caso não funcione, tente rodar os seguintes comandos e depois rodar o install novamente:
+# sudo apt update
+# sudo apt upgrade
+```
+
+Principais comandos tmux que podem ser usados no exame.
+
+```terminal
+# O prefix deverá ser usado antes de todos os comandos ao tmux.
 {prefix} = ctrl + b
 
 ctrl + b + "                Divide a janela na horizontal
@@ -105,8 +116,8 @@ ctrl + d                    Sai da janela atual
 
 ## Deletar objetos pode te custar alguns segundos
 
-Aqui vai uma dica quase ninguem fala e me ajudou, deletar objetos no kubernetes pode demorar alguns
-segundos principalmente quando tem algum volume, no caso de deployment ou pod.
+Aqui vai uma dica quase niguém fala e que me ajudou bastante, deletar objetos no kubernetes pode demorar alguns
+segundos principalmente quando tem alguma secret, configmap ou volume atrelada à ela, no caso de deployment ou pod.
 
 ```
 kubectl -f delete objeto.yaml ; ctrl+z + bg
@@ -159,7 +170,6 @@ for i in $(seq 1 24);do echo "$i - " ;done
 ```
 
 ### Como usar o ctrl + r p procurar no historico
-### Gerenciar o tempo entre perguntas é a chave
 ### Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.
 ### Seu documento deve estar dentro do prazo de validade
 ### Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade
