@@ -84,9 +84,7 @@ Com esses comandos você consegue copiar, colar e apagar blocos de código:
 
 ![](https://www.ocf.berkeley.edu/~ckuehl/tmux/tmux.png)
 
-[tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/)
-
-O tmux não vem instalado por padrão no servidor que é usado no exame, para instalar é bem simples basta rodar isso:
+O [tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/) não vem instalado por padrão no servidor que é usado no exame, para instalar é bem simples basta rodar isso:
 
 ```terminal
 sudo apt -y install tmux
@@ -156,20 +154,38 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 
 ## Anote as respostas
 
+Logo que iniciar o exame, rode esse comando à seguir no terminal:
+
 ```bash
 for i in $(seq 1 24);do echo "$i - " ;done
-
-#Pergunta - Peso - OK SKIP
-1 - 2 OK
-2 - 4 OK
-3 - 8 SKIP
-4 - 4 
-5 - 8
-...
-24 - 3
 ```
 
-### Como usar o ctrl + r p procurar no historico
-### Tenha uma maquina windows de reserva, macbook da problema pra compartilhar a camera.
-### Seu documento deve estar dentro do prazo de validade
-### Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade
+Ele irá gerar 24 linhas no seguinte formato: 
+
+```bash
+1 -
+2 -
+3 -
+4 -
+...
+24 -
+```
+
+Depois copie e cole no notepad da plataforma, assim voçê conseguirá marcar as questões feitas e o peso.
+
+No final o meu notepad do exame ficou algo parecido com isso:
+
+```bash
+Questões, Peso, OK/NOK
+1 - 4 - OK
+2 - 3 - OK
+3 - 7 - NOK
+4 - 4 - OK
+...
+24 - 8 - NOK
+```
+
+Outras dicas:
+  - Tenha uma máquina windows de reserva, quando fiz o exame perdi cerca de 20 minutos entre ficar tentando compartilhar a câmera e trocar de notebook.
+  - Seu documento deve estar dentro do prazo de validade, seja ele RG ou CNH, eles realmente olham a data de validade, aliás a imagem da webcam tem que estar nítida ao ponto de conseguir ver o que está escrito.
+  - Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade
