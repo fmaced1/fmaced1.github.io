@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CKA on fmaced1</title>
+    <link>https://fmaced1.github.io/categories/cka/</link>
+    <description>Recent content in CKA on fmaced1</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/cka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dicas para passar no exame CKA (Certified Kubernetes Administrator)</title>
+      <link>https://fmaced1.github.io/post/preparacao-para-o-cka/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/preparacao-para-o-cka/</guid>
+      <description>Intro
+Esse é um guia para servir de base para os seus estudos e preparação para a prova do CKA.
+Links oficiais sobre a cka:
+ Sobre a certificação [Link] O que cai na prova? [Link]  Principais tópicos e seus respectivos pesos:
+   Domain Weight     Troubleshooting 30%   Cluster Architecture, Installation &amp;amp; Configuration 25%   Services &amp;amp; Networking 20%   Workloads &amp;amp; Scheduling 15%   Storage 10%    Links úteis para estudar:</description>
+    </item>
+    
+  </channel>
+</rss>
