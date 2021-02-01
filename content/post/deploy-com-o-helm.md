@@ -1,6 +1,6 @@
 ---
-title: "Como fazer deploy da sua aplicação com o Helm"
-description: "Como fazer deploy da sua aplicação com o Helm"
+title: "[Draft] Como fazer deploy da sua aplicação com o Helm"
+description: "[Draft] Como fazer deploy da sua aplicação com o Helm"
 date: "2020-12-26"
 categories:
   - "Kubernetes"

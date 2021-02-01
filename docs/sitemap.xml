@@ -8,12 +8,12 @@
   </url>
   
   <url>
-    <loc>https://fmaced1.github.io/categories/</loc>
+    <loc>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</loc>
+    <loc>https://fmaced1.github.io/categories/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,17 +78,17 @@
   </url>
   
   <url>
-    <loc>https://fmaced1.github.io/tags/chatbot/</loc>
-    <lastmod>2020-12-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fmaced1.github.io/post/deploy-com-o-helm/</loc>
     <lastmod>2020-12-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fmaced1.github.io/post/como-fazer-um-chatbot/</loc>
+    <lastmod>2020-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fmaced1.github.io/tags/chatbot/</loc>
     <lastmod>2020-12-26T00:00:00+00:00</lastmod>
   </url>
   

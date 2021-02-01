@@ -1,6 +1,6 @@
 ---
-title: "Debugging remoto de aplicações Java no Kubernetes"
-description: "Debugging remoto de aplicações Java no Kubernetes"
+title: "[Draft] Debugging remoto de aplicações Java no Kubernetes"
+description: "[Draft] Debugging remoto de aplicações Java no Kubernetes"
 date: "2021-01-17"
 categories:
   - "Kubernetes"

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Debugging remoto de aplicações Java no Kubernetes</title>
+      <title>[Draft] Debugging remoto de aplicações Java no Kubernetes</title>
       <link>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@ Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologi
     </item>
     
     <item>
-      <title>Como fazer deploy da sua aplicação com o Helm</title>
+      <title>[Draft] Como fazer deploy da sua aplicação com o Helm</title>
       <link>https://fmaced1.github.io/post/deploy-com-o-helm/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
       

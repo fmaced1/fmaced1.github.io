@@ -38,7 +38,7 @@ import telegram class Telebot: def __init__(self): self.bot_token = &amp;#39;tok
     </item>
     
     <item>
-      <title>Como fazer o seu próprio chatbot em python com o ChatterBot</title>
+      <title>[Draft] Como fazer o seu próprio chatbot em python com o ChatterBot</title>
       <link>https://fmaced1.github.io/post/como-fazer-um-chatbot/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
       

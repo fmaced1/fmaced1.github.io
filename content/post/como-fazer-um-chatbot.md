@@ -1,6 +1,6 @@
 ---
-title: "Como fazer o seu próprio chatbot em python com o ChatterBot"
-description: "Como fazer o seu próprio chatbot em python com o ChatterBot"
+title: "[Draft] Como fazer o seu próprio chatbot em python com o ChatterBot"
+description: "[Draft] Como fazer o seu próprio chatbot em python com o ChatterBot"
 date: "2020-12-26"
 categories:
   - "Python"
