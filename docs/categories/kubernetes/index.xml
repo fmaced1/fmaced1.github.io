@@ -5,26 +5,7 @@
     <link>https://fmaced1.github.io/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Draft] Debugging remoto de aplicações Java no Kubernetes</title>
-      <link>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</guid>
-      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
-Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
-    </item>
-    
-    <item>
-      <title>[Draft] Como fazer deploy da sua aplicação com o Helm</title>
-      <link>https://fmaced1.github.io/post/deploy-com-o-helm/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/deploy-com-o-helm/</guid>
-      <description>WIP</description>
-    </item>
-    
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dicas para a certificação CKA (Certified Kubernetes Administrator)</title>
       <link>https://fmaced1.github.io/post/dicas-para-a-certificacao-cka/</link>

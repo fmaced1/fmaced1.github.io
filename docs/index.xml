@@ -18,16 +18,6 @@ Primeiro, suba uma instância do redis Se você já não tiver uma instância do
     </item>
     
     <item>
-      <title>[Draft] Debugging remoto de aplicações Java no Kubernetes</title>
-      <link>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/kubernetes-debug-remote-java-app/</guid>
-      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
-Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
-    </item>
-    
-    <item>
       <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
       <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
@@ -39,30 +29,12 @@ Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologi
     
     <item>
       <title>[Draft] Como enviar mensagens via telegram com python</title>
-      <link>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</link>
+      <link>https://fmaced1.github.io/post/como-enviar-mensagem-telegram-python/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fmaced1.github.io/post/enviando-mensagem-telegram-python/</guid>
+      <guid>https://fmaced1.github.io/post/como-enviar-mensagem-telegram-python/</guid>
       <description>Como enviar varias fotos agrupadas no telegram? https://core.telegram.org/bots/api#sendmediagroup
 import telegram class Telebot: def __init__(self): self.bot_token = &amp;#39;token_do_seu_bot&amp;#39; self.chat_id = &amp;#39;id_do_chat&amp;#39; self.bot = telegram.Bot(token=self.bot_token) def send_photos(self, photos): return self.bot.send_media_group(chat_id=self.chat_id, media=photos, disable_notification=True) files=&amp;#34;Arquivos que deseja enviar&amp;#34; photos=[] for file in files: photos.append(open(file, &amp;#39;rb&amp;#39;)) if photos: Telebot().send_photos(photos) </description>
-    </item>
-    
-    <item>
-      <title>[Draft] Como fazer deploy da sua aplicação com o Helm</title>
-      <link>https://fmaced1.github.io/post/deploy-com-o-helm/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/deploy-com-o-helm/</guid>
-      <description>WIP</description>
-    </item>
-    
-    <item>
-      <title>[Draft] Como fazer o seu próprio chatbot em python com o ChatterBot</title>
-      <link>https://fmaced1.github.io/post/como-fazer-um-chatbot/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/como-fazer-um-chatbot/</guid>
-      <description>WIP</description>
     </item>
     
     <item>
