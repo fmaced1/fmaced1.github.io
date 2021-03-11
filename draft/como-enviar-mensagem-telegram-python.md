@@ -42,3 +42,5 @@ for file in files:
 if photos:
     Telebot().send_photos(photos)
 ```
+
+{{< cta "Sign up for free!" "https://sensr.net/auth/users/sign_up" >}}

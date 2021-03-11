@@ -5,11 +5,21 @@
     <link>https://fmaced1.github.io/post/</link>
     <description>Recent content in Posts on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Draft] Como fazer cache de objetos json usando python e redis</title>
+      <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
+      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
+      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
+Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
+    </item>
+    
+    <item>
+      <title>Como fazer cache de objetos json usando python e redis</title>
       <link>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-json-com-python/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-json-com-python/</guid>
       <description>Intro Continuando a série &amp;ldquo;Financial Advisor Bot&amp;rdquo; que inicia nesse post aqui.
@@ -18,34 +28,14 @@ Primeiro, suba uma instância do redis Se você já não tiver uma instância do
     </item>
     
     <item>
-      <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
-      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
-      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
-Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
-    </item>
-    
-    <item>
-      <title>[Draft] Como enviar mensagens via telegram com python</title>
-      <link>https://fmaced1.github.io/post/como-enviar-mensagem-telegram-python/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/como-enviar-mensagem-telegram-python/</guid>
-      <description>Como enviar varias fotos agrupadas no telegram? https://core.telegram.org/bots/api#sendmediagroup
-import telegram class Telebot: def __init__(self): self.bot_token = &amp;#39;token_do_seu_bot&amp;#39; self.chat_id = &amp;#39;id_do_chat&amp;#39; self.bot = telegram.Bot(token=self.bot_token) def send_photos(self, photos): return self.bot.send_media_group(chat_id=self.chat_id, media=photos, disable_notification=True) files=&amp;#34;Arquivos que deseja enviar&amp;#34; photos=[] for file in files: photos.append(open(file, &amp;#39;rb&amp;#39;)) if photos: Telebot().send_photos(photos) </description>
-    </item>
-    
-    <item>
-      <title>Dicas para a certificação CKA (Certified Kubernetes Administrator)</title>
+      <title>Dicas para a certificação CKA</title>
       <link>https://fmaced1.github.io/post/dicas-para-a-certificacao-cka/</link>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fmaced1.github.io/post/dicas-para-a-certificacao-cka/</guid>
       <description>Intro Pretendo compartilhar aqui algumas dicas que não estão na maioria dos posts que vi pela internet quando estava me preparando para a prova.
-Esse post não é um guia de estudos para a certificação CKA, mas se você está procurando por um, esses posts estão bem completos:
- https://ravikirans.com/cka-kubernetes-exam-study-guide/ https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/  Links oficiais sobre a cka:  Sobre a certificação [Link] O que cai na prova? [Link]  Principais tópicos e seus respectivos pesos:    Domain Weight     Troubleshooting 30%   Cluster Architecture, Installation &amp;amp; Configuration 25%   Services &amp;amp; Networking 20%   Workloads &amp;amp; Scheduling 15%   Storage 10%    Não faça o tutorial kubernetes-the-hard-way logo de início O tutorial do @kelseyhightower é excelente, porém acredito que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez quando terminar.</description>
+Esse post não é um guia de estudos para a certificação CKA, mas se você está procurando por um, recomendo esses:
+ https://ravikirans.com/cka-kubernetes-exam-study-guide/ https://dev.to/kodekloud/tips-and-tricks-to-pass-the-cka-and-ckad-exam-c76 https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/  Links oficiais sobre a cka:  Sobre a certificação [Link] O que cai na prova? [Link]  Principais tópicos e seus respectivos pesos:    Domain Weight     Troubleshooting 30%   Cluster Architecture, Installation &amp;amp; Configuration 25%   Services &amp;amp; Networking 20%   Workloads &amp;amp; Scheduling 15%   Storage 10%    Não comece pelo kubernetes-the-hard-way O tutorial do @kelseyhightower é excelente, porém acho que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez, quando terminar.</description>
     </item>
     
   </channel>

@@ -1,7 +1,7 @@
 ---
-title: "Dicas para a certificação CKA (Certified Kubernetes Administrator)"
+title: "Dicas para a certificação CKA"
 description: "Dicas para a certificação CKA (Certified Kubernetes Administrator)"
-date: "2020-01-07"
+date: "2021-03-06"
 categories:
   - "Kubernetes"
   - "CKA"
@@ -14,6 +14,7 @@ cover:
     caption: ""
 ShowToc: true
 TocOpen: false
+author: fmaced1
 ---
 
 Intro
@@ -21,9 +22,10 @@ Intro
 
 Pretendo compartilhar aqui algumas dicas que não estão na maioria dos posts que vi pela internet quando estava me preparando para a prova.
 
-Esse post não é um guia de estudos para a certificação CKA, mas se você está procurando por um, esses posts estão bem completos:
+Esse post não é um guia de estudos para a certificação CKA, mas se você está procurando por um, recomendo esses:
 
 - https://ravikirans.com/cka-kubernetes-exam-study-guide/
+- https://dev.to/kodekloud/tips-and-tricks-to-pass-the-cka-and-ckad-exam-c76
 - https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e
 - https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/
 
@@ -36,20 +38,36 @@ Esse post não é um guia de estudos para a certificação CKA, mas se você est
 
 |Domain                                               |Weight  | 
 |:--------------------------------------------------- |:-------|
-|Troubleshooting	                                  |30%
+|Troubleshooting	                                    |30%
 |Cluster Architecture, Installation & Configuration	  |25%
 |Services & Networking	                              |20%
 |Workloads & Scheduling	                              |15%
-|Storage	                                          |10%
+|Storage	                                            |10%
 
-Não faça o tutorial kubernetes-the-hard-way logo de início
+Não comece pelo kubernetes-the-hard-way
 ---
 
-O tutorial do [@kelseyhightower](https://github.com/kelseyhightower) é excelente, porém acredito que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez quando terminar.
+O tutorial do [@kelseyhightower](https://github.com/kelseyhightower) é excelente, porém acho que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez, quando terminar.
 
 Depois de um tempo de estudo, quando já estiver entendendo como funciona os principais componentes, aconselho sim que execute o tutorial pelo menos 2 vezes, tente não entrar em um modo automático, apenas copiando e colando os comandos.
 
 [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+
+Documentação de versões passadas
+---
+
+Quando fiz a prova a documentação do Kubernetes estava mudando para a versão 1.20, fui consultar um comando de instalação que estava lá a dois dias atrás... não estava mais lá rsrs, revirei a documentação, perdi uns 2 min e só depois lembrei que tinha como mudar para a versão anterior.
+
+![kubernetes-documentation-versions](../images/k8s-doc-versions.png#center)
+
+Tenha uma máquina windows de reserva
+---
+
+Quando fiz o exame perdi cerca de 20 minutos antes do inicio da prova, tempo que levei tentando compartilhar a câmera do Macbook pelo Chrome e no final acabar trocando de notebook para um com Windows.
+
+Como é a tela da prova?
+---
+![cka-screen](../images/cka-exam-screen.png)
 
 Dominando o vim
 ---
@@ -58,7 +76,7 @@ Dominando o vim
 
 O vim é um editor derivado do vi presente na maioria das distribuições linux e unix, bem complexo, mas muito eficiente, no exame você terá apenas uma aba com um terminal linux no caso um ubuntu.
 
-Dominar o vim vai te ajudar muito a economizar um tempo precioso na hora do seu exame, acredite 2 horas não dá pra nada, já que são 24 perguntas totalmente práticas :)
+Dominar o vim vai te ajudar muito a economizar tempo na hora do seu exame, acredite 2 horas não dá pra nada, já que as perguntas são totalmente práticas e um detalhe esquecido pode fazer muita diferença no resultado da questão.
 
 | Comandos                    | Descrição    |
 |:--------------------------- |:-------------|
@@ -128,7 +146,7 @@ kubectl -f delete objeto.yaml ; ctrl+z + bg
 ```
 
 O comando ctrl+z + bg coloca o comando anterior em backgroud e te libera a linha de comando para ir editando
-o yml e isso economiza muito tempo, mesmo.
+o yml e isso economiza aqueles segundos que fazem a diferença.
 
 Se quiser voltar o comando para foreground, só digitar:
 
@@ -193,9 +211,6 @@ Questões, Peso, OK/NOK
 24 - 8 - NOK
 ```
 
-Outras dicas
+É isso...
 ---
-
-  - Tenha uma máquina windows de reserva, quando fiz o exame perdi cerca de 20 minutos entre ficar tentando compartilhar a câmera e trocar de notebook.
-  - Seu documento deve estar dentro do prazo de validade, seja ele RG ou CNH, eles realmente olham a data de validade, aliás a imagem da webcam tem que estar nítida ao ponto de conseguir ver o que está escrito.
-  - Não faça a prova de frente para uma janela, isso pode atrapalhar a visibilidade
+Tentei focar aqui em dicas que não são comuns nesses tipos de posts, se te ajudou compartilha com a comunidade e se tem alguma sugestão só mandar um PR aqui: [https://github.com/fmaced1/fmaced1.github.io](https://github.com/fmaced1/fmaced1.github.io)

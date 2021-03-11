@@ -5,26 +5,26 @@
     <link>https://fmaced1.github.io/tags/financial-analisys/</link>
     <description>Recent content in Financial Analisys on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/tags/financial-analisys/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/tags/financial-analisys/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Draft] Como fazer cache de objetos json usando python e redis</title>
+      <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
+      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
+      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
+Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
+    </item>
+    
+    <item>
+      <title>Como fazer cache de objetos json usando python e redis</title>
       <link>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-json-com-python/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-json-com-python/</guid>
       <description>Intro Continuando a série &amp;ldquo;Financial Advisor Bot&amp;rdquo; que inicia nesse post aqui.
 Nesse post irei compartilhar a solução de cache que estou usando, bem simples e direto ao ponto. O objetivo aqui é mostrar uma solução de cache que é fácil de implementar e que já irá evitar que o seu serviço fique indisponível, e de quebra irá diminuir bastante o seu tempo de resposta.
 Primeiro, suba uma instância do redis Se você já não tiver uma instância do redis:</description>
-    </item>
-    
-    <item>
-      <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
-      <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</guid>
-      <description>Intro Sempre me interessei pelo mercado financeiro e por toda a tecnologia que esse mercado já usa de ferramenta, como por exemplo HFT&amp;rsquo;s (High-Frequency Trading) e Quantitative Trading, temas que unem o melhor do mercado de tecnologia e financeiro.
-Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologias para ajudar na tomada de decisão ou para recomendar investimentos para os seus clientes, e pensando em uma escala menor decidi criar um advisor que pudesse me ajudar a analisar todas as ações da bolsa brasileira de forma massiva e me mostrasse apenas aquelas ações que estivessem com algum sinal &amp;ldquo;interessante&amp;rdquo; com base em alguns parâmetros.</description>
     </item>
     
   </channel>

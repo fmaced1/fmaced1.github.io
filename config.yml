@@ -11,8 +11,16 @@ minify:
     disableXML: true
     # minifyOutput: true
 
+defaultContentLanguage: pt
 languages:
-    en:
+  en:
+    weight: 1
+  pt:
+    weight: 2
+    languageCode: pt-br
+
+languages:
+    pt:
         languageName: "Blog"
         weight: 1
         menu:
@@ -70,12 +78,6 @@ params:
           url: "https://github.com/fmaced1/"
         - name: linkedin
           url: "https://www.linkedin.com/in/fmaced1/"
-        - name: codepen
-          url: "#"
-        - name: stackoverflow
-          url: "#"
-        - name: twitter
-          url: "#"
 
 taxonomies:
     category: categories
