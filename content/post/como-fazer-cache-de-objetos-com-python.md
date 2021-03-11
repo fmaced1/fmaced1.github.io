@@ -1,6 +1,6 @@
 ---
-title: "Como fazer cache de objetos json usando python e redis"
-description: "Como fazer cache de objetos json usando python e redis"
+title: "Como fazer cache de objetos usando python e redis"
+description: "Como fazer cache de objetos usando python e redis"
 date: "2021-03-06"
 categories:
   - "Python"
