@@ -22,10 +22,10 @@ Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologi
     
     <item>
       <title>Canary release usando o Nginx Ingress Controller no K8s</title>
-      <link>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python/</link>
+      <link>https://fmaced1.github.io/post/canary-release-nginx-kubernetes/</link>
       <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python/</guid>
+      <guid>https://fmaced1.github.io/post/canary-release-nginx-kubernetes/</guid>
       <description>Intro O Canary Release é uma estratégia de deploy que consiste em rotear uma parte dos seus usuários para uma nova versão, com isso você consegue monitorar qual será o comportamento dessa nova versão sem afetar a todos os seus usuários caso ocorra algum erro.
 Há algumas maneiras de fazer isso, no Kubernetes isso é possível nativamente aumentando o número de réplicas dos pods novos e diminuindo os pods com a versão antiga, porém para ter uma porcentagem de 1% da nova versão, nós teríamos que ter necessariamente 1 pod com a versão nova e outros 99 com a versão antiga, o que não vai de encontro com a filosofia do Docker/Kubernetes que vieram para resolver a otimização de recursos entre outros problemas.</description>
     </item>
