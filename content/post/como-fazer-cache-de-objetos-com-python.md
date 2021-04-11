@@ -87,18 +87,18 @@ Agora faça o deploy da segunda versão:
 kubectl apply -f nginx-canary/apps/app-v2.yaml
 ```
 
-Como não temos um dns, vamos colocar o nome da maquina no /etc/hosts apontando para um nome qualquer:
-```bash
-export IP_LOADBALANCER_METALLB="192.168.x.y"
-echo "$IP_LOADBALANCER_METALLB k8s.local" >> /etc/hosts
-```
-
 Liste o serviço ingress-nginx para saber o ip que a sua app irá responder, esse ip irá responder por **k8s.local**.
 
 ```bash
 kubectl get svc ingress-nginx -n ingress-nginx
 NAME            TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 ingress-nginx   LoadBalancer   10.106.17.108   192.168.x.y   80:31574/TCP   53m
+```
+
+Como não temos um dns, vamos colocar o nome da maquina no /etc/hosts apontando para um nome qualquer:
+```bash
+export EXTERNAL_IP_INGRESS_NGINX="192.168.x.y"
+echo "$EXTERNAL_IP_INGRESS_NGINX k8s.local" >> /etc/hosts
 ```
 
 Depois disso conseguimos fazer uma requisição para a rota da aplicação, deixe esse comando rodando em outro terminal:
