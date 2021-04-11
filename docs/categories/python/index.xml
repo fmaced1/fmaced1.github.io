@@ -5,7 +5,11 @@
     <link>https://fmaced1.github.io/categories/python/</link>
     <description>Recent content in Python on fmaced1</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fmaced1.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fmaced1.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Fazendo o download dos dados históricos de ações usando o yfinance</title>
       <link>https://fmaced1.github.io/post/dados-historicos-acoes-b3/</link>
@@ -18,10 +22,10 @@ Pesquisando sobre o tema vi que grandes bancos já usam essas e outras tecnologi
     
     <item>
       <title>Como fazer cache de objetos usando python e redis</title>
-      <link>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python/</link>
+      <link>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python-copy/</link>
       <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python/</guid>
+      <guid>https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python-copy/</guid>
       <description>Intro Continuando a série &amp;ldquo;Financial Advisor Bot&amp;rdquo; que inicia nesse post aqui.
 Nesse post irei compartilhar a solução de cache que estou usando, bem simples e direto ao ponto. O objetivo aqui é mostrar uma solução de cache que é fácil de implementar e que já irá evitar que o seu serviço fique indisponível, e de quebra irá diminuir bastante o seu tempo de resposta.
 Primeiro, suba uma instância do redis Se você já não tiver uma instância do redis:</description>

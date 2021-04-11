@@ -1,16 +1,16 @@
 ---
-title: "Como fazer cache de objetos usando python e redis"
-description: "Como fazer cache de objetos usando python e redis"
-date: "2021-03-06"
+title: "Canary release usando o Nginx Ingress Controller no K8s"
+description: "Canary release usando o Nginx Ingress Controller no K8s"
+date: "2021-04-11"
 categories:
-  - "Python"
+  - "Kubernetes"
 tags:
-  - "Python"
-  - "Financial Analisys"
-  - "Financial Advisor Bot"
+  - "Canary Release"
+  - "Nginx"
+  - "DevOps"
 cover:
-    image: "https://images.pexels.com/photos/971364/pexels-photo-971364.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-    alt: "Velocity"
+    image: "https://images.pexels.com/photos/1557689/pexels-photo-1557689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    alt: "Rails"
     caption: "From [Pexels](https://www.pexels.com)"
 ShowToc: true
 TocOpen: false
@@ -18,113 +18,128 @@ author: fmaced1
 ---
 
 Intro
----------
-
-Continuando a série "Financial Advisor Bot" que inicia nesse [post aqui](../dados-historicos-acoes-b3).
-
-Nesse post irei compartilhar a solução de cache que estou usando, bem simples e direto ao ponto. O objetivo aqui é mostrar uma solução de cache que é fácil de implementar e que já irá evitar que o seu serviço fique indisponível, e de quebra irá diminuir bastante o seu tempo de resposta.
-
-Primeiro, suba uma instância do redis
--------------------------
-
-Se você já não tiver uma instância do redis:
-
-Instale o docker, escolha de acordo com a sua plataforma [aqui](https://docs.docker.com/engine/install/).
-
-Nesse [link](https://hub.docker.com/_/redis?tab=description&page=1&ordering=last_updated) você consegue ver as versões disponíveis, crie também, uma conta no ***docker hub***, precisaremos dela para conseguir fazer o download da imagem do redis.
-
-```terminal
-docker login
-docker pull redis
-
-# Caso queira outra versão, especifique depois dos : (dois pontos)
-#docker pull redis:[version]
-
-docker network create redis
-docker run -d --name=redis --network redis -p 6379:6379 redis:latest
-```
-
-Usando o redis
 ---
 
-Ao invés de baixar os dados todas as vezes que precisamos dos dados históricos de uma ação, porque não guardar em cache? Afinal o yahoo atualiza as cotações só depois de 15 minutos, e para a nossa análise o que importa é a cotação semanal.
+O [Canary Release](https://martinfowler.com/bliki/CanaryRelease.html) é uma estratégia de deploy que consiste em rotear uma parte dos seus usuários para uma nova versão, com isso você consegue monitorar qual será o comportamento dessa nova versão sem afetar a todos os seus usuários caso ocorra algum erro. 
 
-Para isso vamos criar um método/função ```get_data_history```, ela irá bater no redis e buscar os dados daquela ação, se o redis não tiver esses dados, vamos fazer o download e guardar no redis, assim nas próximas vezes os dados já estarão em cache, como vamos passar um tempo de expiração o redis vai apagar essa informação depois de 1 hora.
+Há algumas maneiras de fazer isso, no [Kubernetes](https://kubernetes.io/pt/) isso é possível nativamente aumentando o número de réplicas dos pods novos e diminuindo os pods com a versão antiga, porém para ter uma porcentagem de 1% da nova versão, nós teríamos que ter necessariamente 1 pod com a versão nova e outros 99 com a versão antiga, o que não vai de encontro com a filosofia do Docker/Kubernetes que vieram para resolver a otimização de recursos entre outros problemas.
 
-Nome do arquivo deve ser ***_redis.py***, porque iremos importa-lo no próximo arquivo
-```python
-import redis, pickle, zlib, os
+Outra forma de implementar essa estratégia é usando um Load Balancer nesse caso vamos usar o [Nginx](https://www.nginx.com/), com ele conseguimos manipular encaminhamento das requisições dizendo que uma porcentagem do tráfego irá para uma versão especifica, com isso podemos ter somente 1 pod com a nova versão e 1 com a antiga e ainda assim atender 1% das transações com a nova versão.
 
-class RedisCache(object):
-    def __init__(self):
-        
-        redis_host = os.getenv('REDIS_HOST')
-        redis_port = os.getenv('REDIS_PORT')
-        
-        if redis_host == None and redis_port == None:
-            redis_host = "localhost"
-            redis_port = 6379
+![Canary Release](https://mysieve-img.s3.amazonaws.com/pub/1560011795_2019_06_08_50163e01-cb36-446d-9964-594bf25e8494.png)
 
-        self.redis_client = redis.StrictRedis(host=redis_host, port=redis_port)
-
-    def get_value(self, _key):
-        """ Get content from redis
-
-        Args:
-            _key ([string])
-
-        Returns:
-            [dict]: [Dataframe]
-        """
-        return pickle.loads(zlib.decompress(self.redis_client.get(_key)))
-
-    def set_value(self, _key, _value, expiration_seconds):
-        """ Loads data object into redis
-
-        Args:
-            _key ([string]): [key must be string]
-            _value ([json]): [Loads data to compress with zlib and store into redis]
-            expiration_seconds ([int]): [life time seconds limit for data]
-        """
-        self.redis_client.setex(_key, expiration_seconds, zlib.compress(pickle.dumps(_value)))
-```
-
-```python
-from _redis import RedisCache
-
-expiration_seconds = (60*60)*1 #1hr
-
-def get_data_history(ticker=str, period=str, interval=str, expiration_seconds=int):
-    try:
-        return RedisCache.get_redis(ticker)
-    except Exception:
-        data = yf.Ticker(ticker).history(period, interval, actions=False).dropna()
-        RedisCache.set_value(ticker, data, expiration_seconds)
-        
-        return RedisCache.get_redis(ticker)
-
-ticker = "STBP3.SA"
-period = "1y"
-interval = "1wk"
-
-# Assim quando chamarmos essa função, ela irá retornar um dataframe com as cotações da ação.
-print(get_data_history(ticker, period, interval, expiration_seconds))
-```
-
-Como manipular esses dados no redis?
+Instalação no cluster Kubernetes
 ---
-Enquanto o container estiver de pé, conseguiremos ver esses dados que que estão em memória no redis.
 
-Para acessar os dados de uma determinada ação, rode o comando à seguir:
-```terminal
-docker exec -it redis redis-cli get VALE3.SA
+Primeiro faça o clone do projeto https://github.com/fmaced1/canary-release-nginx-ingress-controller
+
+```bash
+git clone https://github.com/fmaced1/canary-release-nginx-ingress-controller
 ```
 
-E para apagar todos os dados do redis:
-```terminal
-docker exec -it redis redis-cli FLUSHDB
+Para essa demo, iremos usar o namespace canary, mude nos arquivos **yaml** para o namespace que preferir.
+
+Instale o nginx ingress controller:
+```bash
+kubectl apply -f nginx-ingress-controller/ingress-nginx-manifests.yaml -f nginx-ingress-controller/expose-ingress-nginx.yaml
+
+kubectl rollout status deploy nginx-ingress-controller -n ingress-nginx -w
 ```
 
-Esse post faz parte da série "Financial Advisor Bot", mostrando as soluções que estou usando na construção desse "advisor", irei organizar todos os posts dessa série aqui [Financial Advisor Bot](../../tags/financial-advisor-bot/).
+Se você estiver em um cluster Kubernetes que não tenha um Load Balancer, instale o MetalLB ele irá atribuir um ip público ao seu Nginx (Ingress Controller), se você estiver na cloud provavelmente você já tem um [LB do seu provider](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer).
 
-[Click aqui para ir para o próximo post.]()
+Ajuste o range de ips que serão alocados para o MetalLB gerenciar:
+```yaml
+# metallb/configmap-metallb.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - 192.168.x.y-192.168.x.z # ajuste aqui o range de ips
+```
+
+Instale o MetalLB para ter um loadbalancer:
+```bash
+kubectl apply -f metallb/configmap-metallb.yaml
+kubectl apply -f metallb/metallb-manifests.yaml
+```
+
+Canary release
+---
+
+Faça o deploy da aplicação v1:
+```bash
+# app-v1.yaml contém o deploy e o svc
+# ingress-v1.yaml contém a rota
+kubectl apply -f nginx-canary/apps/app-v1.yaml -f nginx-canary/apps/ingress-v1.yaml
+```
+
+Agora faça o deploy da segunda versão:
+```bash
+# app-v2.yaml contém o deploy e o svc
+kubectl apply -f nginx-canary/apps/app-v2.yaml
+```
+
+Como não temos um dns, vamos colocar o nome da maquina no /etc/hosts apontando para um nome qualquer:
+```bash
+export IP_LOADBALANCER_METALLB="192.168.x.y"
+echo "$IP_LOADBALANCER_METALLB k8s.local" >> /etc/hosts
+```
+
+Liste o serviço ingress-nginx para saber o ip que a sua app irá responder, esse ip irá responder por **k8s.local**.
+
+```bash
+kubectl get svc ingress-nginx -n ingress-nginx
+NAME            TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+ingress-nginx   LoadBalancer   10.106.17.108   192.168.x.y   80:31574/TCP   53m
+```
+
+Depois disso conseguimos fazer uma requisição para a rota da aplicação, deixe esse comando rodando em outro terminal:
+```bash
+count=0; while sleep 0.3; do let count+=1 ;echo $count - $(curl -s k8s.local); done
+# output
+1 - Host: my-app-v1-84ff7f48cc-kcn57, Version: v1.0.0
+2 - Host: my-app-v1-84ff7f48cc-kcn57, Version: v1.0.0
+3 - Host: my-app-v1-84ff7f48cc-kcn57, Version: v1.0.0
+```
+
+Agora vamos dividir o tráfego, 10% para o svc app-v2 e o resto continua no svc da app-v1:
+```bash
+kubectl apply -f nginx-canary/by-weight/ingress-v2-canary.yaml
+```
+
+#### Veja que de 300 requisições apenas 32 foram para app v2:
+```bash
+bash canary/nginx-canary/curl-canary.sh k8s.local
+...
+v1: 290 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 291 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 292 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 293 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 294 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 295 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 296 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 297 v2: 30 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 297 v2: 31 - Host: my-app-v2-dfdff8845-n6bml, Version: v2.0.0
+v1: 298 v2: 31 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 299 v2: 31 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 300 v2: 31 - Host: my-app-v1-84ff7f48cc-4d9kq, Version: v1.0.0
+v1: 300 v2: 32 - Host: my-app-v2-dfdff8845-n6bml, Version: v2.0.0
+```
+
+Quando estiver satisfeito com a app-v2, exclua o ingress-canary:
+```bash
+kubectl delete -f nginx-canary/by-weight/ingress-v2-canary.yaml
+```
+
+E vire todo o tráfego para a app-v2
+```bash
+kubectl apply -f nginx-canary/apps/ingress-v2.yaml
+```

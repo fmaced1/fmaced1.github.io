@@ -1,8 +1,5 @@
 #!/bin/sh
 
-#git clone https://github.com/adityatelange/hugo-PaperMod themes/hugo-PaperMod --depth=1
-#git submodule add -b main https://github.com/fmaced1/fmced1.github.io.git public
-
 # If a command fails then the deploy stops
 set -e
 

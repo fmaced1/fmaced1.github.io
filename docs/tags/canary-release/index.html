@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Kubernetes | fmaced1</title>
+<title>Canary Release | fmaced1</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="Description">
 <meta name="author" content="fmaced1">
-<link rel="canonical" href="https://fmaced1.github.io/tags/kubernetes/" />
+<link rel="canonical" href="https://fmaced1.github.io/tags/canary-release/" />
 <link href="https://fmaced1.github.io/assets/css/stylesheet.min.516e467cc4ae04c84d4dd91a9e08e973b74aa88bfa53c8a55c061386a754832b.css" integrity="sha256-UW5GfMSuBMhNTdkangjpc7dKqIv6U8ilXAYThqdUgys=" rel="preload stylesheet"
     as="style">
 
@@ -22,16 +22,16 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.68.3" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://fmaced1.github.io/tags/kubernetes/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://fmaced1.github.io/tags/canary-release/index.xml">
 
 
-<meta property="og:title" content="Kubernetes" />
+<meta property="og:title" content="Canary Release" />
 <meta property="og:description" content="Description" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://fmaced1.github.io/tags/kubernetes/" />
-<meta property="og:updated_time" content="2021-03-06T00:00:00+00:00" />
+<meta property="og:url" content="https://fmaced1.github.io/tags/canary-release/" />
+<meta property="og:updated_time" content="2021-04-11T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubernetes"/>
+<meta name="twitter:title" content="Canary Release"/>
 <meta name="twitter:description" content="Description"/>
 
 
@@ -120,30 +120,29 @@
 
     <main class="main"> 
 <header class="page-header">
-  <h1>Kubernetes</h1>
+  <h1>Canary Release</h1>
 </header>
 
 
 
 <article class="post-entry tag-entry"> 
-<figure class="entry-cover"><img src="https://miro.medium.com/max/700/1*A6Ka4665MBUJk44LBQHvKA.jpeg" alt="">
+<figure class="entry-cover"><img src="https://images.pexels.com/photos/1557689/pexels-photo-1557689.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Rails">
 </figure>
 
   <header class="entry-header">
     <h2>
-      Dicas para a certificação CKA
+      Canary release usando o Nginx Ingress Controller no K8s
     </h2>
   </header>
   <section class="entry-content">
-    <p>Intro Pretendo compartilhar aqui algumas dicas que não estão na maioria dos posts que vi pela internet quando estava me preparando para a prova.
-Esse post não é um guia de estudos para a certificação CKA, mas se você está procurando por um, recomendo esses:
- https://ravikirans.com/cka-kubernetes-exam-study-guide/ https://dev.to/kodekloud/tips-and-tricks-to-pass-the-cka-and-ckad-exam-c76 https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e https://jimangel.io/post/cka-exam-for-experienced-kubernetes-operators/  Links oficiais sobre a cka:  Sobre a certificação [Link] O que cai na prova? [Link]  Principais tópicos e seus respectivos pesos:    Domain Weight     Troubleshooting 30%   Cluster Architecture, Installation &amp; Configuration 25%   Services &amp; Networking 20%   Workloads &amp; Scheduling 15%   Storage 10%    Não comece pelo kubernetes-the-hard-way O tutorial do @kelseyhightower é excelente, porém acho que não é uma boa idéia investir um tempo considerável, executando um passo a passo que você não irá entender muita coisa do que fez, quando terminar....</p>
+    <p>Intro O Canary Release é uma estratégia de deploy que consiste em rotear uma parte dos seus usuários para uma nova versão, com isso você consegue monitorar qual será o comportamento dessa nova versão sem afetar a todos os seus usuários caso ocorra algum erro.
+Há algumas maneiras de fazer isso, no Kubernetes isso é possível nativamente aumentando o número de réplicas dos pods novos e diminuindo os pods com a versão antiga, porém para ter uma porcentagem de 1% da nova versão, nós teríamos que ter necessariamente 1 pod com a versão nova e outros 99 com a versão antiga, o que não vai de encontro com a filosofia do Docker/Kubernetes que vieram para resolver a otimização de recursos entre outros problemas....</p>
   </section>
   <footer class="entry-footer">
 
-March 6, 2021&nbsp;·&nbsp;5 minutos&nbsp;·&nbsp;fmaced1
+April 11, 2021&nbsp;·&nbsp;4 minutos&nbsp;·&nbsp;fmaced1
 </footer>
-  <a class="entry-link" aria-label="post link to Dicas para a certificação CKA" href="https://fmaced1.github.io/post/dicas-para-a-certificacao-cka/"></a>
+  <a class="entry-link" aria-label="post link to Canary release usando o Nginx Ingress Controller no K8s" href="https://fmaced1.github.io/post/como-fazer-cache-de-objetos-com-python/"></a>
 </article>
 
     </main><footer class="footer">
