@@ -13,3 +13,5 @@ Blog https://fmaced1.github.io estático feito com [Hugo](https://gohugo.io/) e 
 ![White Background](img/white-background.png)
 
 ![Content](img/content.png)
+
+https://stackoverflow.com/questions/10042786/how-to-successfully-implement-ogimage-for-the-linkedin
