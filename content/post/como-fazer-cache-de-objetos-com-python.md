@@ -46,7 +46,7 @@ kubectl apply -f nginx-ingress-controller/ingress-nginx-manifests.yaml -f nginx-
 kubectl rollout status deploy nginx-ingress-controller -n ingress-nginx -w
 ```
 
-Se você estiver em um cluster Kubernetes que não tenha um Load Balancer, instale o MetalLB ele irá atribuir um ip público ao seu Nginx (Ingress Controller), se você estiver na cloud provavelmente você já tem um [LB do seu provider](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer).
+Se você estiver em um cluster Kubernetes que não tenha um Load Balancer, instale o MetalLB ele irá atribuir um ip público ao seu Nginx (Ingress Controller), se você estiver em um ambiente cloud provavelmente você já tem um [LB do seu provider](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer).
 
 Ajuste o range de ips que serão alocados para o MetalLB gerenciar:
 ```yaml
